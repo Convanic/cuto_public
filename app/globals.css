@@ -1,26 +1,260 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* CUTO Brand Colors - Gradient */
+  --cuto-gradient-start: #8B2486;  /* Lila/Magenta */
+  --cuto-gradient-end: #F27122;   /* Orange */
+  --cuto-primary: #952494;  /* Primary button color */
+  --cuto-primary-hover: #7a1f75;
+  
+  /* Glassmorphism Colors */
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --glass-bg-solid: rgba(255, 255, 255, 0.95);
+  
+  /* Text Colors */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-white: #ffffff;
+}
+
+/* ===== A/B/C/D Test Theme Variants ===== */
+
+/* Theme A: Original - Lila → Orange (Default) */
+[data-theme="A"] {
+  --cuto-gradient-start: #8B2486;
+  --cuto-gradient-end: #F27122;
+  --cuto-primary: #952494;
+  --cuto-primary-hover: #7a1f75;
+}
+
+/* Theme B: Grün → Orange */
+[data-theme="B"] {
+  --cuto-gradient-start: #73D004;
+  --cuto-gradient-end: #FA9B0D;
+  --cuto-primary: #5cb800;
+  --cuto-primary-hover: #4a9600;
+}
+
+/* Theme C: Blau → Orange */
+[data-theme="C"] {
+  --cuto-gradient-start: #0EB4F2;
+  --cuto-gradient-end: #FA9B0D;
+  --cuto-primary: #0a9fd6;
+  --cuto-primary-hover: #0889b8;
+}
+
+/* Theme D: Blau → Grün */
+[data-theme="D"] {
+  --cuto-gradient-start: #0EB4F2;
+  --cuto-gradient-end: #73D004;
+  --cuto-primary: #0a9fd6;
+  --cuto-primary-hover: #0889b8;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  min-height: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--cuto-gradient-start) 0%, var(--cuto-gradient-end) 100%);
+  background-attachment: fixed;
+  color: var(--text-primary);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.5s ease;
+}
+
+/* Glassmorphism Utility Classes */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(7.7px);
+  -webkit-backdrop-filter: blur(7.7px);
+  border: 1px solid rgba(255, 255, 255, 0.42);
+}
+.bold {
+  font-weight: bold;
+}
+
+/* CTA Button Glow Effect */
+.cta-glow {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease;
+}
+
+.cta-glow:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 50px rgba(255, 255, 255, 0.4);
+}
+
+/* ===== Animation Keyframes ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-up {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Initial hidden state */
+.animate-hidden {
+  opacity: 0;
+}
+
+/* Staggered delays */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+.animate-delay-600 { animation-delay: 600ms; }
+.animate-delay-700 { animation-delay: 700ms; }
+
+/* Hover Glow Effect for Cards */
+.hover-glow {
+  transition: all 0.3s ease;
+}
+
+.hover-glow:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(139, 36, 134, 0.3), 0 0 20px rgba(139, 36, 134, 0.2);
+}
+
+/* ===== Theme-aware Utility Classes ===== */
+
+/* Primary Button - uses theme colors */
+.btn-primary {
+  background: linear-gradient(135deg, var(--cuto-gradient-start) 0%, var(--cuto-gradient-end) 100%);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+}
+
+/* Solid Primary Button */
+.btn-primary-solid {
+  background-color: var(--cuto-primary);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-solid:hover {
+  background-color: var(--cuto-primary-hover);
+}
+
+/* Gradient Text */
+.text-gradient {
+  background: linear-gradient(135deg, var(--cuto-gradient-start) 0%, var(--cuto-gradient-end) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient Border */
+.border-gradient {
+  border-image: linear-gradient(135deg, var(--cuto-gradient-start), var(--cuto-gradient-end)) 1;
+}
+
+/* Badge with gradient background */
+.badge-gradient {
+  background: linear-gradient(135deg, var(--cuto-gradient-start) 0%, var(--cuto-gradient-end) 100%);
+  color: white;
+}
+
+/* Feature Card Icon Animation */
+.feature-icon-wrapper {
+  transition: all 0.3s ease;
+}
+
+.group:hover .feature-icon-wrapper {
+  transform: scale(1.1) rotate(5deg);
 }

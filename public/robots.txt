@@ -1,0 +1,12 @@
+# robots.txt for CUTO
+# https://cuto.ai
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://cuto.ai/sitemap.xml
+
+# Disallow admin/api routes
+Disallow: /api/
+
