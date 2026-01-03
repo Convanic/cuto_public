@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { UseCase, CategoryInfo } from '@/lib/use-cases';
@@ -12,7 +12,7 @@ import { useI18n } from '@/lib/i18n/context';
 function MarkdownContent({ content }: { content: string }) {
   // Process markdown content into React elements
   const lines = content.trim().split('\n');
-  const elements: JSX.Element[] = [];
+  const elements: React.ReactElement[] = [];
   let currentParagraph: string[] = [];
   let inList = false;
   let listItems: string[] = [];

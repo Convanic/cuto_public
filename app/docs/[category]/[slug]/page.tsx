@@ -1,3 +1,4 @@
+import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { ChevronRight, ArrowLeft, ArrowRight, Clock, Tag, Calendar, BookOpen } from 'lucide-react';
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
 // Simple markdown-like renderer
 function renderContent(content: string) {
   const lines = content.trim().split('\n');
-  const elements: JSX.Element[] = [];
+  const elements: React.ReactElement[] = [];
   let inCodeBlock = false;
   let codeBlockContent: string[] = [];
   let codeBlockLang = '';
