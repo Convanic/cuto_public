@@ -599,6 +599,43 @@ export const it: TranslationKeys = {
         estimates: { title: 'Stime accurate', desc: 'Stime realistiche da progetti reali' },
         customizable: { title: 'Completamente personalizzabile', desc: 'Adatta ogni template alle tue esigenze' },
       },
+      howItWorks: {
+        title: 'Come funzionano i template',
+        steps: {
+          select: { title: 'Seleziona template', desc: 'Scegli dalla nostra libreria in base al tipo di progetto' },
+          configure: { title: 'Configura scope', desc: 'Definisci moduli, sedi e fattori di complessità' },
+          generate: { title: 'Auto-generazione', desc: 'CUTO genera il tuo piano progetto con attività' },
+          customize: { title: 'Personalizza', desc: 'Adatta date, risorse e dipendenze' },
+        },
+      },
+      categories: {
+        s4hana: {
+          name: 'Implementazione SAP S/4HANA',
+          templates: [
+            { name: 'Implementazione Greenfield', desc: 'Nuova implementazione con metodologia SAP Activate', activities: '500+' },
+            { name: 'Conversione Brownfield', desc: 'Conversione da SAP ECC a S/4HANA', activities: '350+' },
+          ],
+        },
+        rollout: {
+          name: 'Rollout e localizzazione',
+          templates: [
+            { name: 'Template Rollout', desc: 'Rollout standardizzato a nuove sedi', activities: '200+' },
+          ],
+        },
+        migration: {
+          name: 'Migrazione dati',
+          templates: [
+            { name: 'Migrazione dati master', desc: 'Migrazione completa dati master', activities: '150+' },
+          ],
+        },
+      },
+      activitiesLabel: 'Attività',
+      templatesLabel: 'Template',
+      customTemplate: {
+        title: 'Hai bisogno di un template personalizzato?',
+        description: 'Il nostro team può creare template su misura per le tue esigenze e metodologie specifiche.',
+        cta: 'Contattaci',
+      },
       cta: { title: 'Avvia il tuo progetto con le basi giuste', demo: 'Prenota una demo', pricing: 'Vedi prezzi' },
     },
 

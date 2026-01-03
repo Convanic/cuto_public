@@ -599,6 +599,43 @@ export const es: TranslationKeys = {
         estimates: { title: 'Estimaciones precisas', desc: 'Estimaciones realistas de proyectos reales' },
         customizable: { title: 'Totalmente personalizable', desc: 'Adapta cada plantilla a tus necesidades' },
       },
+      howItWorks: {
+        title: 'Cómo funcionan las plantillas',
+        steps: {
+          select: { title: 'Seleccionar plantilla', desc: 'Elige de nuestra biblioteca según tu tipo de proyecto' },
+          configure: { title: 'Configurar alcance', desc: 'Define módulos, ubicaciones y factores de complejidad' },
+          generate: { title: 'Auto-generación', desc: 'CUTO genera tu plan de proyecto con actividades' },
+          customize: { title: 'Personalizar', desc: 'Ajusta fechas, recursos y dependencias' },
+        },
+      },
+      categories: {
+        s4hana: {
+          name: 'Implementación SAP S/4HANA',
+          templates: [
+            { name: 'Implementación Greenfield', desc: 'Nueva implementación con metodología SAP Activate', activities: '500+' },
+            { name: 'Conversión Brownfield', desc: 'Conversión de SAP ECC a S/4HANA', activities: '350+' },
+          ],
+        },
+        rollout: {
+          name: 'Rollout y localización',
+          templates: [
+            { name: 'Template Rollout', desc: 'Rollout estandarizado a nuevas ubicaciones', activities: '200+' },
+          ],
+        },
+        migration: {
+          name: 'Migración de datos',
+          templates: [
+            { name: 'Migración de datos maestros', desc: 'Migración completa de datos maestros', activities: '150+' },
+          ],
+        },
+      },
+      activitiesLabel: 'Actividades',
+      templatesLabel: 'Plantillas',
+      customTemplate: {
+        title: '¿Necesitas una plantilla personalizada?',
+        description: 'Nuestro equipo puede crear plantillas adaptadas a tus necesidades y metodologías específicas.',
+        cta: 'Contáctanos',
+      },
       cta: { title: 'Inicia tu proyecto con la base correcta', demo: 'Programar una demo', pricing: 'Ver precios' },
     },
 
