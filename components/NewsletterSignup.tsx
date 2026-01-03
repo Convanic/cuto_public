@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useI18n } from '@/lib/i18n/context';
 
 interface NewsletterSignupProps {
   variant?: 'default' | 'compact' | 'footer';
@@ -9,6 +10,7 @@ interface NewsletterSignupProps {
 }
 
 export default function NewsletterSignup({ variant = 'default', className = '' }: NewsletterSignupProps) {
+  const { t } = useI18n();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [message, setMessage] = useState('');
@@ -18,7 +20,7 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
     
     if (!email) {
       setStatus('error');
-      setMessage('Please enter your email address.');
+      setMessage(t.home?.newsletter?.errorMessage || 'Please enter your email address.');
       return;
     }
 
@@ -29,7 +31,7 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
 
     // For now, just simulate success
     setStatus('success');
-    setMessage('🎉 Thank you! Check your email for the SAP Project Checklist.');
+    setMessage(t.home?.newsletter?.successMessage || '🎉 Thank you! Check your email for the SAP Project Checklist.');
     setEmail('');
 
     // Reset after 5 seconds
@@ -42,16 +44,16 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
   if (variant === 'footer') {
     return (
       <div className={className}>
-        <h4 className="text-white font-semibold mb-4">Stay Updated</h4>
+        <h4 className="text-white font-semibold mb-4">{t.home?.newsletter?.footerTitle || 'Stay Updated'}</h4>
         <p className="text-white/70 text-sm mb-4">
-          Get SAP project tips & CUTO updates.
+          {t.home?.newsletter?.footerSubtitle || 'Get SAP project tips & CUTO updates.'}
         </p>
         <form onSubmit={handleSubmit} className="space-y-3">
           <input
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your email"
+            placeholder={t.home?.newsletter?.footerPlaceholder || 'Your email'}
             className="w-full px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 text-sm focus:outline-none focus:ring-2 focus:ring-white/30 transition-all"
             disabled={status === 'loading' || status === 'success'}
           />
@@ -60,7 +62,11 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
             disabled={status === 'loading' || status === 'success'}
             className="w-full px-4 py-2 bg-white text-gray-900 rounded-lg text-sm font-semibold hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            {status === 'loading' ? 'Subscribing...' : status === 'success' ? '✓ Subscribed!' : 'Subscribe'}
+            {status === 'loading' 
+              ? (t.home?.newsletter?.subscribing || 'Subscribing...') 
+              : status === 'success' 
+                ? (t.home?.newsletter?.subscribed || '✓ Subscribed!') 
+                : (t.home?.newsletter?.subscribe || 'Subscribe')}
           </button>
         </form>
         {message && (
@@ -77,15 +83,15 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
       <div className={`glass-card rounded-xl p-6 ${className}`}>
         <div className="flex flex-col sm:flex-row items-center gap-4">
           <div className="flex-1 text-center sm:text-left">
-            <h3 className="font-semibold text-gray-900 mb-1">📧 Get SAP Project Tips</h3>
-            <p className="text-sm text-gray-600">Weekly insights for successful SAP projects.</p>
+            <h3 className="font-semibold text-gray-900 mb-1">📧 {t.home?.newsletter?.compactTitle || 'Get SAP Project Tips'}</h3>
+            <p className="text-sm text-gray-600">{t.home?.newsletter?.compactSubtitle || 'Weekly insights for successful SAP projects.'}</p>
           </div>
           <form onSubmit={handleSubmit} className="flex gap-2 w-full sm:w-auto">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              placeholder="Your email"
+              placeholder={t.home?.newsletter?.footerPlaceholder || 'Your email'}
               className="flex-1 sm:w-48 px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
               disabled={status === 'loading' || status === 'success'}
             />
@@ -94,7 +100,7 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
               disabled={status === 'loading' || status === 'success'}
               className="px-4 py-2 bg-[#952494] text-white rounded-lg text-sm font-semibold hover:bg-[#7a1f75] transition-colors disabled:opacity-50 whitespace-nowrap"
             >
-              {status === 'loading' ? '...' : status === 'success' ? '✓' : 'Subscribe'}
+              {status === 'loading' ? '...' : status === 'success' ? '✓' : (t.home?.newsletter?.subscribe || 'Subscribe')}
             </button>
           </form>
         </div>
@@ -114,6 +120,13 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
     );
   }
 
+  const checklistItems = t.home?.newsletter?.checklistItems || [
+    'Pre-project assessment criteria',
+    'Go-live readiness checklist',
+    'Risk identification framework',
+    'Cutover planning template',
+  ];
+
   // Default variant - full lead magnet section
   return (
     <div className={`glass-card rounded-2xl overflow-hidden ${className}`}>
@@ -122,25 +135,19 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
         <div className="p-8 lg:p-10">
           <div className="inline-flex items-center gap-2 bg-gradient-to-r from-[#952494]/10 to-[#FA9B0C]/10 px-3 py-1 rounded-full mb-4">
             <span className="text-lg">📋</span>
-            <span className="text-sm font-medium text-[#952494]">Free Download</span>
+            <span className="text-sm font-medium text-[#952494]">{t.home?.newsletter?.freeDownload || 'Free Download'}</span>
           </div>
           
           <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-            SAP Project Checklist
+            {t.home?.newsletter?.title || 'SAP Project Checklist'}
           </h3>
           
           <p className="text-gray-600 mb-6">
-            Get our comprehensive checklist covering all phases of SAP implementations. 
-            Used by 500+ project managers worldwide.
+            {t.home?.newsletter?.subtitle || 'Get our comprehensive checklist covering all phases of SAP implementations. Used by 500+ project managers worldwide.'}
           </p>
           
           <ul className="space-y-3 mb-6">
-            {[
-              'Pre-project assessment criteria',
-              'Go-live readiness checklist',
-              'Risk identification framework',
-              'Cutover planning template',
-            ].map((item, index) => (
+            {checklistItems.map((item: string, index: number) => (
               <li key={index} className="flex items-center gap-3 text-gray-700">
                 <svg className="w-5 h-5 text-green-500 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -156,7 +163,7 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your work email"
+                placeholder={t.home?.newsletter?.placeholder || 'Enter your work email'}
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#952494] focus:border-transparent transition-all"
                 disabled={status === 'loading' || status === 'success'}
               />
@@ -172,16 +179,16 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
                     <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                     <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
                   </svg>
-                  Sending...
+                  {t.home?.newsletter?.sending || 'Sending...'}
                 </span>
               ) : status === 'success' ? (
-                '✓ Check Your Email!'
+                t.home?.newsletter?.checkEmail || '✓ Check Your Email!'
               ) : (
-                'Download Free Checklist'
+                t.home?.newsletter?.button || 'Download Free Checklist'
               )}
             </button>
             <p className="text-xs text-gray-500 text-center">
-              By subscribing, you agree to receive occasional updates. Unsubscribe anytime.
+              {t.home?.newsletter?.disclaimer || 'By subscribing, you agree to receive occasional updates. Unsubscribe anytime.'}
             </p>
           </form>
 
@@ -208,7 +215,7 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
               </svg>
             </div>
             <div className="text-4xl font-bold mb-2">42</div>
-            <div className="text-white/80">Checklist Items</div>
+            <div className="text-white/80">{t.home?.newsletter?.checklistCount || 'Checklist Items'}</div>
             <div className="mt-6 flex justify-center gap-2">
               {['PDF', 'Excel', 'Notion'].map((format) => (
                 <span key={format} className="px-3 py-1 bg-white/20 rounded-full text-sm">
@@ -222,4 +229,3 @@ export default function NewsletterSignup({ variant = 'default', className = '' }
     </div>
   );
 }
-
