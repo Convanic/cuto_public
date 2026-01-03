@@ -94,6 +94,64 @@ export const pt: TranslationKeys = {
       title: 'O CUTO resolve estes problemas',
       subtitle: 'Com processos estruturados, papéis claros e insights em tempo real.',
     },
+    targetAudience: {
+      title: 'Para cada grupo-alvo',
+      subtitle: 'O CUTO apoia todos os que querem gerir com sucesso projetos SAP',
+      tabs: {
+        customers: {
+          label: 'Clientes SAP',
+          title: 'Para clientes SAP',
+          description: 'O CUTO apoia-o como cliente SAP na gestão profissional e implementação bem-sucedida dos seus projetos SAP internos.',
+          whyTitle: 'Porquê o CUTO para clientes SAP?',
+          benefits: [
+            'Gestão de projetos estruturada sem custos de consultoria externa',
+            'Templates comprovados para projetos SAP típicos da sua empresa',
+            'Controlo total sobre o progresso do projeto, esforços e riscos',
+            'Estruturas de projeto reutilizáveis para iniciativas futuras',
+            'Comunicação transparente com stakeholders internos'
+          ]
+        },
+        consultancies: {
+          label: 'Consultorias SAP',
+          title: 'Para consultorias SAP',
+          description: 'Aumente a eficiência dos seus projetos de consultoria e entregue resultados estruturados e rastreáveis aos seus clientes.',
+          whyTitle: 'Porquê o CUTO para consultorias SAP?',
+          benefits: [
+            'Inicialização de projetos mais rápida com templates pré-configurados',
+            'Apresentações de projeto profissionais para clientes',
+            'Processos padronizados para execução de projeto consistente',
+            'Melhor planeamento de recursos e estimativa de esforços',
+            'Melhores práticas reutilizáveis para projetos semelhantes'
+          ]
+        },
+        freelancers: {
+          label: 'Freelancers',
+          title: 'Para freelancers',
+          description: 'Como freelancer, beneficia de ferramentas profissionais de gestão de projetos que destacam a sua experiência.',
+          whyTitle: 'Porquê o CUTO para freelancers?',
+          benefits: [
+            'Gestão de projetos profissional mesmo como indivíduo',
+            'Início rápido em novos projetos com templates',
+            'Estimativas de esforço credíveis para os seus clientes',
+            'Documentação estruturada do seu trabalho',
+            'Estruturas de projeto reutilizáveis para trabalhos semelhantes'
+          ]
+        },
+        users: {
+          label: 'Utilizadores SAP',
+          title: 'Para utilizadores SAP',
+          description: 'Como utilizador SAP, obtém as ferramentas para gerir os seus projetos SAP de forma independente e bem-sucedida.',
+          whyTitle: 'Porquê o CUTO para utilizadores SAP?',
+          benefits: [
+            'Gestão de projetos independente sem suporte externo',
+            'Melhores práticas para projetos típicos de utilizadores SAP',
+            'Estruturação clara mesmo para projetos mais pequenos',
+            'Suporte à aprendizagem através de templates predefinidos',
+            'Documentação rastreável para a sua equipa'
+          ]
+        }
+      }
+    },
     testimonials: {
       title: 'O que os nossos clientes dizem',
       subtitle: 'Saiba como o CUTO transforma os projetos SAP.',

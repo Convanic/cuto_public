@@ -94,6 +94,64 @@ export const cs: TranslationKeys = {
       title: 'CUTO řeší tyto problémy',
       subtitle: 'Se strukturovanými procesy, jasnými rolemi a přehledy v reálném čase.',
     },
+    targetAudience: {
+      title: 'Pro každou cílovou skupinu',
+      subtitle: 'CUTO podporuje všechny, kteří chtějí úspěšně řídit SAP projekty',
+      tabs: {
+        customers: {
+          label: 'SAP zákazníci',
+          title: 'Pro SAP zákazníky',
+          description: 'CUTO vás jako SAP zákazníka podporuje v profesionálním řízení a úspěšné realizaci vašich interních SAP projektů.',
+          whyTitle: 'Proč CUTO pro SAP zákazníky?',
+          benefits: [
+            'Strukturované řízení projektů bez nákladů na externí konzultace',
+            'Osvědčené šablony pro typické SAP projekty ve vaší společnosti',
+            'Plná kontrola nad průběhem projektu, úsilím a riziky',
+            'Znovupoužitelné projektové struktury pro budoucí iniciativy',
+            'Transparentní komunikace s interními zainteresovanými stranami'
+          ]
+        },
+        consultancies: {
+          label: 'SAP konzultace',
+          title: 'Pro SAP konzultační společnosti',
+          description: 'Zvyšte efektivitu vašich konzultačních projektů a dodávejte klientům strukturované, sledovatelné výsledky.',
+          whyTitle: 'Proč CUTO pro SAP konzultace?',
+          benefits: [
+            'Rychlejší inicializace projektů s předkonfigurovanými šablonami',
+            'Profesionální projektové prezentace pro klienty',
+            'Standardizované procesy pro konzistentní realizaci projektů',
+            'Lepší plánování zdrojů a odhad úsilí',
+            'Znovupoužitelné osvědčené postupy pro podobné projekty'
+          ]
+        },
+        freelancers: {
+          label: 'Freelanceři',
+          title: 'Pro freelancery',
+          description: 'Jako freelancer získáte profesionální nástroje pro řízení projektů, které zdůrazní vaši odbornost.',
+          whyTitle: 'Proč CUTO pro freelancery?',
+          benefits: [
+            'Profesionální řízení projektů i jako jednotlivec',
+            'Rychlý start do nových projektů s šablonami',
+            'Důvěryhodné odhady úsilí pro vaše klienty',
+            'Strukturovaná dokumentace vaší práce',
+            'Znovupoužitelné projektové struktury pro podobné zakázky'
+          ]
+        },
+        users: {
+          label: 'SAP uživatelé',
+          title: 'Pro SAP uživatele',
+          description: 'Jako SAP uživatel získáte nástroje pro nezávislé a úspěšné řízení vašich SAP projektů.',
+          whyTitle: 'Proč CUTO pro SAP uživatele?',
+          benefits: [
+            'Nezávislé řízení projektů bez externí podpory',
+            'Osvědčené postupy pro typické projekty SAP uživatelů',
+            'Jasná struktura i pro menší projekty',
+            'Podpora učení prostřednictvím předdefinovaných šablon',
+            'Sledovatelná dokumentace pro váš tým'
+          ]
+        }
+      }
+    },
     testimonials: {
       title: 'Co říkají naši zákazníci',
       subtitle: 'Zjistěte, jak CUTO transformuje SAP projekty.',

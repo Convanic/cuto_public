@@ -94,6 +94,64 @@ export const zh: TranslationKeys = {
       title: 'CUTO解决了这些问题',
       subtitle: '通过结构化的流程、清晰的角色和实时的洞察力。',
     },
+    targetAudience: {
+      title: '适用于所有目标群体',
+      subtitle: 'CUTO支持所有希望成功管理SAP项目的人',
+      tabs: {
+        customers: {
+          label: 'SAP客户',
+          title: '面向SAP客户',
+          description: 'CUTO支持您作为SAP客户，专业地管理和成功实施您的内部SAP项目。',
+          whyTitle: '为什么SAP客户选择CUTO？',
+          benefits: [
+            '无需外部咨询成本的结构化项目管理',
+            '为您公司典型SAP项目提供经过验证的模板',
+            '完全控制项目进度、工作量和风险',
+            '可重复使用的项目结构用于未来计划',
+            '与内部利益相关者的透明沟通'
+          ]
+        },
+        consultancies: {
+          label: 'SAP咨询公司',
+          title: '面向SAP咨询公司',
+          description: '提高您咨询项目的效率，为客户提供结构化、可追溯的成果。',
+          whyTitle: '为什么SAP咨询公司选择CUTO？',
+          benefits: [
+            '使用预配置模板更快地初始化项目',
+            '为客户提供专业的项目演示',
+            '标准化流程确保一致的项目执行',
+            '更好的资源规划和工作量估算',
+            '可重复使用的最佳实践用于类似项目'
+          ]
+        },
+        freelancers: {
+          label: '自由职业者',
+          title: '面向自由职业者',
+          description: '作为自由职业者，您可以从专业项目管理工具中受益，展示您的专业知识。',
+          whyTitle: '为什么自由职业者选择CUTO？',
+          benefits: [
+            '即使作为个人也能进行专业项目管理',
+            '使用模板快速启动新项目',
+            '为客户提供可信的工作量估算',
+            '结构化记录您的工作',
+            '可重复使用的项目结构用于类似任务'
+          ]
+        },
+        users: {
+          label: 'SAP用户',
+          title: '面向SAP用户',
+          description: '作为SAP用户，您将获得独立且成功管理SAP项目的工具。',
+          whyTitle: '为什么SAP用户选择CUTO？',
+          benefits: [
+            '无需外部支持的独立项目管理',
+            '典型SAP用户项目的最佳实践',
+            '即使是小型项目也能清晰结构化',
+            '通过预定义模板提供学习支持',
+            '为您的团队提供可追溯的文档'
+          ]
+        }
+      }
+    },
     testimonials: {
       title: '我们的客户怎么说',
       subtitle: '了解CUTO如何改变SAP项目。',
