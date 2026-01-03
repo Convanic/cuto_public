@@ -1,9 +1,9 @@
 // Internationalization (i18n) Configuration
-// Supports: German, English, French, Spanish, Italian
+// Supports: German, English, French, Spanish, Italian, Russian, Chinese, Hindi, Czech, Portuguese
 
-export type Locale = 'de' | 'en' | 'fr' | 'es' | 'it';
+export type Locale = 'de' | 'en' | 'fr' | 'es' | 'it' | 'ru' | 'zh' | 'hi' | 'cs' | 'pt';
 
-export const locales: Locale[] = ['de', 'en', 'fr', 'es', 'it'];
+export const locales: Locale[] = ['de', 'en', 'fr', 'es', 'it', 'ru', 'zh', 'hi', 'cs', 'pt'];
 
 export const localeNames: Record<Locale, string> = {
   de: 'Deutsch',
@@ -11,6 +11,11 @@ export const localeNames: Record<Locale, string> = {
   fr: 'Français',
   es: 'Español',
   it: 'Italiano',
+  ru: 'Русский',
+  zh: '中文',
+  hi: 'हिन्दी',
+  cs: 'Čeština',
+  pt: 'Português',
 };
 
 export const localeFlags: Record<Locale, string> = {
@@ -19,6 +24,11 @@ export const localeFlags: Record<Locale, string> = {
   fr: '🇫🇷',
   es: '🇪🇸',
   it: '🇮🇹',
+  ru: '🇷🇺',
+  zh: '🇨🇳',
+  hi: '🇮🇳',
+  cs: '🇨🇿',
+  pt: '🇵🇹',
 };
 
 export const defaultLocale: Locale = 'de';
