@@ -616,16 +616,53 @@ export const it: TranslationKeys = {
             { name: 'Conversione Brownfield', desc: 'Conversione da SAP ECC a S/4HANA', activities: '350+' },
           ],
         },
-        rollout: {
-          name: 'Rollout e localizzazione',
+        modules: {
+          name: 'Moduli SAP',
           templates: [
-            { name: 'Template Rollout', desc: 'Rollout standardizzato a nuove sedi', activities: '200+' },
+            { name: 'FI/CO Finance & Controlling', desc: 'Contabilità generale, fornitori, clienti, centri di costo', activities: '180+' },
+            { name: 'MM Gestione Materiali', desc: 'Acquisti, gestione magazzino, MRP', activities: '150+' },
           ],
         },
         migration: {
           name: 'Migrazione dati',
           templates: [
-            { name: 'Migrazione dati master', desc: 'Migrazione completa dati master', activities: '150+' },
+            { name: 'Migrazione dati master', desc: 'Migrazione clienti, fornitori, materiali', activities: '80+' },
+            { name: 'Migrazione dati transazionali', desc: 'Partite aperte, ordini', activities: '60+' },
+          ],
+        },
+        cutover: {
+          name: 'Cutover & Go-Live',
+          templates: [
+            { name: 'Cutover standard', desc: 'Go-Live singola sede con fasi standard', activities: '150+' },
+            { name: 'Big Bang Cutover', desc: 'Tutte le sedi simultaneamente', activities: '200+' },
+          ],
+        },
+        testing: {
+          name: 'Testing',
+          templates: [
+            { name: 'Unit Testing', desc: 'Test di configurazione e sviluppo', activities: '100+' },
+            { name: 'Integration Testing', desc: 'Test processi end-to-end', activities: '120+' },
+          ],
+        },
+        change: {
+          name: 'Change Management',
+          templates: [
+            { name: 'Gestione Stakeholder', desc: 'Analisi e piano di engagement', activities: '50+' },
+            { name: 'Programma formazione', desc: 'Formazione utenti finali e key user', activities: '70+' },
+          ],
+        },
+        cloud: {
+          name: 'Soluzioni SAP Cloud',
+          templates: [
+            { name: 'SAP SuccessFactors', desc: 'Implementazione HCM Cloud', activities: '180+' },
+            { name: 'SAP Ariba', desc: 'Implementazione Procurement Cloud', activities: '150+' },
+          ],
+        },
+        integration: {
+          name: 'Integrazione & Interfacce',
+          templates: [
+            { name: 'Integrazione EDI', desc: 'Setup Electronic Data Interchange', activities: '40+' },
+            { name: 'Sviluppo API', desc: 'Sviluppo interfacce REST/SOAP', activities: '50+' },
           ],
         },
       },
