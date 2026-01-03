@@ -386,32 +386,6 @@ export const de = {
     },
   },
   
-  // Docs
-  docs: {
-    title: 'Dokumentation',
-    subtitle: 'Alles, was Sie wissen müssen, um CUTO erfolgreich zu nutzen. Anleitungen, Tutorials und Best Practices.',
-    search: 'Suchen Sie nach Artikeln, Themen oder Schlagwörtern...',
-    popularArticles: 'Beliebte Artikel',
-    browseTopics: 'Themen durchsuchen',
-    quickAccess: 'Schnellzugriff',
-    articles: 'Artikel',
-    readingTime: 'Lesezeit',
-    lastUpdated: 'Aktualisiert',
-    notFound: {
-      title: 'Nicht gefunden, was Sie suchen?',
-      subtitle: 'Unser Support-Team hilft Ihnen gerne weiter. Kontaktieren Sie uns für persönliche Unterstützung.',
-      contactSupport: 'Support kontaktieren',
-    },
-    feedback: {
-      title: 'War dieser Artikel hilfreich?',
-      subtitle: 'Lassen Sie uns wissen, wie wir unsere Dokumentation verbessern können.',
-      helpful: 'Ja, hilfreich',
-      notHelpful: 'Nicht hilfreich',
-    },
-    relatedArticles: 'Verwandte Artikel',
-    backToOverview: 'Zurück zur Übersicht',
-  },
-  
   // Cookie Consent
   cookies: {
     title: 'Cookie-Einstellungen',

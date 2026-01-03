@@ -388,32 +388,6 @@ export const en: TranslationKeys = {
     },
   },
   
-  // Docs
-  docs: {
-    title: 'Documentation',
-    subtitle: 'Everything you need to know to successfully use CUTO. Guides, tutorials and best practices.',
-    search: 'Search for articles, topics or keywords...',
-    popularArticles: 'Popular Articles',
-    browseTopics: 'Browse Topics',
-    quickAccess: 'Quick Access',
-    articles: 'Articles',
-    readingTime: 'Reading time',
-    lastUpdated: 'Updated',
-    notFound: {
-      title: "Didn't find what you're looking for?",
-      subtitle: 'Our support team is happy to help. Contact us for personal assistance.',
-      contactSupport: 'Contact Support',
-    },
-    feedback: {
-      title: 'Was this article helpful?',
-      subtitle: 'Let us know how we can improve our documentation.',
-      helpful: 'Yes, helpful',
-      notHelpful: 'Not helpful',
-    },
-    relatedArticles: 'Related Articles',
-    backToOverview: 'Back to Overview',
-  },
-  
   // Cookie Consent
   cookies: {
     title: 'Cookie Settings',
