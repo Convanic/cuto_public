@@ -670,8 +670,8 @@ export const it: TranslationKeys = {
       templatesLabel: 'Template',
       customTemplate: {
         title: 'Hai bisogno di un template personalizzato?',
-        description: 'Il nostro team può creare template su misura per le tue esigenze e metodologie specifiche.',
-        cta: 'Contattaci',
+        desc: 'Il nostro team può creare template su misura per le tue esigenze e metodologie specifiche.',
+        button: 'Contattaci',
       },
       cta: { title: 'Avvia il tuo progetto con le basi giuste', demo: 'Prenota una demo', pricing: 'Vedi prezzi' },
     },

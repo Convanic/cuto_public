@@ -670,8 +670,8 @@ export const es: TranslationKeys = {
       templatesLabel: 'Plantillas',
       customTemplate: {
         title: '¿Necesitas una plantilla personalizada?',
-        description: 'Nuestro equipo puede crear plantillas adaptadas a tus necesidades y metodologías específicas.',
-        cta: 'Contáctanos',
+        desc: 'Nuestro equipo puede crear plantillas adaptadas a tus necesidades y metodologías específicas.',
+        button: 'Contáctanos',
       },
       cta: { title: 'Inicia tu proyecto con la base correcta', demo: 'Programar una demo', pricing: 'Ver precios' },
     },
