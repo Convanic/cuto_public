@@ -1,15 +1,15 @@
 module.exports = {
   apps: [
     {
-      name: 'cuto-public',
+      name: 'cuto',
       script: 'npm',
-      args: 'start',
+      args: 'start -- -p 3002',
       cwd: process.cwd(),
       instances: 1,
       exec_mode: 'fork',
       env: {
         NODE_ENV: 'production',
-        PORT: 3000
+        PORT: 3002
       },
       error_file: './logs/err.log',
       out_file: './logs/out.log',
