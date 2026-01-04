@@ -1469,7 +1469,6 @@ export const en: TranslationKeys = {
       applyButton: 'Apply as Partner',
       consultation: 'Book consultation',
     },
-    // Partner Types Data
     types: {
       referral: {
         name: 'Referral Partner',
@@ -1477,10 +1476,10 @@ export const en: TranslationKeys = {
         description: 'Recommend CUTO to your network and earn attractive commissions for every successful deal.',
         targetAudience: 'SAP freelancers, independent consultants, project managers',
         idealFor: [
-          'SAP consultants with broad customer networks',
+          'SAP consultants with a broad client network',
           'Freelancers in the SAP community',
           'Former SAP employees',
-          'Project managers with enterprise contacts',
+          'Project managers with large enterprise contacts',
         ],
         requirements: [
           'No minimum requirements',
@@ -1489,7 +1488,7 @@ export const en: TranslationKeys = {
         ],
         benefits: [
           '20% commission on first year revenue',
-          '10% recurring revenue share (year 2+)',
+          '10% recurring revenue share (Year 2+)',
           'Personal tracking link',
           'Monthly payouts',
           'Access to partner portal',
@@ -1504,13 +1503,13 @@ export const en: TranslationKeys = {
       reseller: {
         name: 'Reseller Partner',
         shortName: 'Reseller',
-        description: 'Distribute CUTO as part of your portfolio and benefit from attractive margins and recurring revenue.',
-        targetAudience: 'Small and medium SAP consulting companies',
+        description: 'Sell CUTO as part of your portfolio and benefit from attractive margins and recurring revenue.',
+        targetAudience: 'Small and medium-sized SAP consulting companies',
         idealFor: [
           'SAP consultancies with 5-50 consultants',
           'IT system houses with SAP focus',
           'Regional SAP service providers',
-          'Boutique consulting for mid-market',
+          'Boutique consultancies for mid-market',
         ],
         requirements: [
           'At least 2 certified CUTO consultants',
@@ -1532,12 +1531,13 @@ export const en: TranslationKeys = {
           recurring: '15%',
           bonus: 'Deal registration bonus up to €5,000',
         },
+        highlight: true,
       },
       solution: {
         name: 'Solution Partner',
         shortName: 'Solution',
-        description: 'Strategic partnership for large consulting firms with joint go-to-market activities and co-selling.',
-        targetAudience: 'Large SAP consulting firms and system integrators',
+        description: 'Strategic partnership for large consulting companies with joint go-to-market activities and co-selling.',
+        targetAudience: 'Large SAP consulting companies and system integrators',
         idealFor: [
           'Top-tier SAP consultancies',
           'Global system integrators',
@@ -1565,17 +1565,17 @@ export const en: TranslationKeys = {
         commission: {
           firstYear: 'Individual',
           recurring: 'Revenue Share',
-          bonus: 'Co-Selling Accelerator',
+          bonus: 'Co-selling accelerator',
         },
       },
       technology: {
         name: 'Technology Partner',
         shortName: 'Technology',
-        description: 'Integrate your solution with CUTO and unlock new markets together through technological synergies.',
-        targetAudience: 'Software vendors in the SAP ecosystem',
+        description: 'Integrate your solution with CUTO and jointly open up new markets through technological synergies.',
+        targetAudience: 'Software providers in the SAP ecosystem',
         idealFor: [
-          'SAP add-on vendors',
-          'Project management tool providers',
+          'SAP add-on providers',
+          'Project management tool manufacturers',
           'DevOps & ALM platforms',
           'Data and analytics providers',
         ],
@@ -1595,15 +1595,17 @@ export const en: TranslationKeys = {
           'Cross-promotion in newsletter',
         ],
         commission: {
-          firstYear: 'Lead Sharing',
+          firstYear: 'Lead-Sharing',
           recurring: 'Cross-Referral',
         },
       },
     },
-    // Partner Tiers Data
     tierLevels: {
       registered: {
         name: 'Registered',
+        minRevenue: '€0',
+        minDeals: 0,
+        certifiedConsultants: 0,
         benefits: [
           'Partner portal access',
           'Basic training materials',
@@ -1613,6 +1615,9 @@ export const en: TranslationKeys = {
       },
       silver: {
         name: 'Silver',
+        minRevenue: '€25,000',
+        minDeals: 2,
+        certifiedConsultants: 2,
         benefits: [
           'All Registered benefits',
           '+5% additional margin',
@@ -1624,6 +1629,9 @@ export const en: TranslationKeys = {
       },
       gold: {
         name: 'Gold',
+        minRevenue: '€75,000',
+        minDeals: 5,
+        certifiedConsultants: 5,
         benefits: [
           'All Silver benefits',
           '+10% additional margin',
@@ -1636,6 +1644,9 @@ export const en: TranslationKeys = {
       },
       platinum: {
         name: 'Platinum',
+        minRevenue: '€150,000',
+        minDeals: 10,
+        certifiedConsultants: 10,
         benefits: [
           'All Gold benefits',
           '+15% additional margin',
@@ -1649,7 +1660,6 @@ export const en: TranslationKeys = {
         ],
       },
     },
-    // General Benefits
     generalBenefits: [
       {
         icon: '💰',
@@ -1669,7 +1679,7 @@ export const en: TranslationKeys = {
       {
         icon: '🛠️',
         title: 'Sales & Marketing Support',
-        description: 'Ready-made presentations, case studies, and co-branded materials for your pitches.',
+        description: 'Ready-made presentations, case studies and co-branded materials for your pitches.',
       },
       {
         icon: '🤝',
@@ -1679,13 +1689,12 @@ export const en: TranslationKeys = {
       {
         icon: '🚀',
         title: 'Fast Onboarding',
-        description: 'From application to active partner in just 2 weeks – we make it easy for you.',
+        description: 'In just 2 weeks from application to active partner – we make it easy for you.',
       },
     ],
-    // Testimonials
     partnerTestimonials: [
       {
-        quote: 'As a freelancer, I have earned over €45,000 in commissions in the last 12 months – simply through referrals in my network. CUTO practically sells itself.',
+        quote: 'As a freelancer, I earned over €45,000 in commissions in the last 12 months – simply through recommendations in my network. CUTO practically sells itself.',
         author: 'Thomas Müller',
         role: 'SAP Senior Consultant (Freelancer)',
         company: 'Self-employed',
@@ -1699,18 +1708,17 @@ export const en: TranslationKeys = {
         partnerType: 'reseller',
       },
       {
-        quote: 'The co-selling model works excellently. On complex RFPs, we work hand in hand with the CUTO team – this convinces customers and accelerates the sales cycle.',
+        quote: 'The co-selling model works excellently. For complex RFPs, we work hand in hand with the CUTO team – this convinces customers and accelerates the sales cycle.',
         author: 'Michael Hoffmann',
         role: 'Director SAP Practice',
         company: 'Global Systems AG',
         partnerType: 'solution',
       },
     ],
-    // FAQ
     faqItems: [
       {
         question: 'How quickly can I start earning?',
-        answer: 'After registration, you immediately receive your personal tracking link. As soon as a customer you referred signs a contract and the first payment is made, your commission is due. For enterprise deals, the sales cycle can take 3-6 months.',
+        answer: 'After registration, you will immediately receive your personal tracking link. As soon as a customer you recommended signs a contract and the first payment is made, your commission becomes due. For enterprise deals, the sales cycle can take 3-6 months.',
       },
       {
         question: 'Is there a minimum contract term?',
@@ -1718,19 +1726,19 @@ export const en: TranslationKeys = {
       },
       {
         question: 'How does deal registration work?',
-        answer: 'As a Reseller or Solution Partner, you can register potential deals via the partner portal. This gives you price protection for 90 days and prevents other partners from working on the same lead.',
+        answer: 'Reseller and Solution Partners can register potential deals through the partner portal. This gives you price protection for 90 days and prevents other partners from working on the same lead.',
       },
       {
         question: 'What training is required?',
-        answer: 'Referral Partners do not require formal certification. For Reseller and Solution Partners, we offer a free online certification program (approx. 8 hours) as well as optional in-person training.',
+        answer: 'Referral Partners do not require formal certification. For Reseller and Solution Partners, we offer a free online certification program (approx. 8 hours) as well as optional on-site training.',
       },
       {
-        question: 'Can I become a Reseller as a freelancer later?',
-        answer: 'Yes, many of our most successful partners started as Referral Partners and have grown. Once you meet the requirements, you can upgrade and benefit from better conditions.',
+        question: 'Can I become a Reseller later as a freelancer?',
+        answer: 'Yes, many of our most successful partners started as Referral Partners and grew. Once you meet the requirements, you can upgrade and benefit from better terms.',
       },
       {
         question: 'Are there exclusive sales territories?',
-        answer: 'For Platinum Partners, we can arrange exclusivity agreements in certain regions or industries. This is negotiated individually and requires appropriate revenue commitments.',
+        answer: 'For Platinum Partners, we can enter into exclusive agreements in certain regions or industries. This is negotiated individually and requires corresponding revenue commitments.',
       },
     ],
   },

@@ -1471,7 +1471,6 @@ export const zh: TranslationKeys = {
       applyButton: '申请成为合作伙伴',
       consultation: '预约咨询',
     },
-    // Partner data - falls back to German (types cast to avoid TS errors, fallback handles missing data)
     types: {} as any,
     tierLevels: {} as any,
     generalBenefits: [] as any,

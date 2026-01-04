@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'cuto',
+      name: 'cuto-public',
       script: 'npm',
       args: 'start -- -p 3002',
       cwd: process.cwd(),

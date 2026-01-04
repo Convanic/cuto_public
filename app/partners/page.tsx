@@ -34,7 +34,6 @@ export default function PartnersPage() {
   const [selectedPartnerType, setSelectedPartnerType] = useState<PartnerType>('referral');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(0);
   
-  // Get translated partner data based on current locale
   const partnerTypes = getPartnerTypes(locale);
   const partnerTiers = getPartnerTiers(locale);
   const generalBenefits = getGeneralBenefits(locale);
@@ -307,7 +306,7 @@ export default function PartnersPage() {
                     ))}
                     {tier.benefits.length > 4 && (
                       <li className="text-xs text-gray-400">
-                        {t.partners.tiers.moreBenefits.replace('{count}', String(tier.benefits.length - 4))}
+                        +{tier.benefits.length - 4} weitere Benefits
                       </li>
                     )}
                   </ul>

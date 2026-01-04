@@ -1467,7 +1467,6 @@ export const de = {
       applyButton: 'Partner-Antrag stellen',
       consultation: 'Beratungsgespräch buchen',
     },
-    // Partner Types Data
     types: {
       referral: {
         name: 'Referral Partner',
@@ -1530,6 +1529,7 @@ export const de = {
           recurring: '15%',
           bonus: 'Deal Registration Bonus bis €5.000',
         },
+        highlight: true,
       },
       solution: {
         name: 'Solution Partner',
@@ -1598,10 +1598,12 @@ export const de = {
         },
       },
     },
-    // Partner Tiers Data
     tierLevels: {
       registered: {
         name: 'Registered',
+        minRevenue: '€0',
+        minDeals: 0,
+        certifiedConsultants: 0,
         benefits: [
           'Partner-Portal Zugang',
           'Basis-Schulungsmaterialien',
@@ -1611,6 +1613,9 @@ export const de = {
       },
       silver: {
         name: 'Silver',
+        minRevenue: '€25.000',
+        minDeals: 2,
+        certifiedConsultants: 2,
         benefits: [
           'Alle Registered-Benefits',
           '+5% zusätzliche Marge',
@@ -1622,6 +1627,9 @@ export const de = {
       },
       gold: {
         name: 'Gold',
+        minRevenue: '€75.000',
+        minDeals: 5,
+        certifiedConsultants: 5,
         benefits: [
           'Alle Silver-Benefits',
           '+10% zusätzliche Marge',
@@ -1634,6 +1642,9 @@ export const de = {
       },
       platinum: {
         name: 'Platinum',
+        minRevenue: '€150.000',
+        minDeals: 10,
+        certifiedConsultants: 10,
         benefits: [
           'Alle Gold-Benefits',
           '+15% zusätzliche Marge',
@@ -1647,7 +1658,6 @@ export const de = {
         ],
       },
     },
-    // General Benefits
     generalBenefits: [
       {
         icon: '💰',
@@ -1680,7 +1690,6 @@ export const de = {
         description: 'In nur 2 Wochen vom Antrag zum aktiven Partner – wir machen es Ihnen leicht.',
       },
     ],
-    // Testimonials
     partnerTestimonials: [
       {
         quote: 'Als Freelancer habe ich in den letzten 12 Monaten über €45.000 an Provisionen verdient – einfach durch Empfehlungen in meinem Netzwerk. CUTO verkauft sich praktisch von selbst.',
@@ -1704,7 +1713,6 @@ export const de = {
         partnerType: 'solution',
       },
     ],
-    // FAQ
     faqItems: [
       {
         question: 'Wie schnell kann ich mit dem Verdienen beginnen?',

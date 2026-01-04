@@ -1469,7 +1469,6 @@ export const pt: TranslationKeys = {
       applyButton: 'Candidatar-se como Parceiro',
       consultation: 'Agendar consulta',
     },
-    // Partner data - falls back to German (types cast to avoid TS errors, fallback handles missing data)
     types: {} as any,
     tierLevels: {} as any,
     generalBenefits: [] as any,
