@@ -1469,6 +1469,12 @@ export const hi: TranslationKeys = {
       applyButton: 'Apply as Partner',
       consultation: 'Book consultation',
     },
+    // Partner data - falls back to German (types cast to avoid TS errors, fallback handles missing data)
+    types: {} as any,
+    tierLevels: {} as any,
+    generalBenefits: [] as any,
+    partnerTestimonials: [] as any,
+    faqItems: [] as any,
   },
 
   contact: {

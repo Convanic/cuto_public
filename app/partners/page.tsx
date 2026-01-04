@@ -9,11 +9,11 @@ import {
   Mail, Phone, Building2
 } from 'lucide-react';
 import {
-  partnerTypes,
-  partnerTiers,
-  generalBenefits,
-  partnerTestimonials,
-  partnerFAQ,
+  getPartnerTypes,
+  getPartnerTiers,
+  getGeneralBenefits,
+  getPartnerTestimonials,
+  getPartnerFAQ,
   partnerStats,
   PartnerType,
 } from '@/lib/partners';
@@ -30,9 +30,16 @@ function AnimatedCounter({ value, suffix = '' }: { value: number; suffix?: strin
 }
 
 export default function PartnersPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [selectedPartnerType, setSelectedPartnerType] = useState<PartnerType>('referral');
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(0);
+  
+  // Get translated partner data based on current locale
+  const partnerTypes = getPartnerTypes(locale);
+  const partnerTiers = getPartnerTiers(locale);
+  const generalBenefits = getGeneralBenefits(locale);
+  const partnerTestimonials = getPartnerTestimonials(locale);
+  const partnerFAQ = getPartnerFAQ(locale);
   
   const selectedPartner = partnerTypes.find(p => p.id === selectedPartnerType);
   
@@ -199,7 +206,7 @@ export default function PartnersPage() {
                       href="/partners/apply"
                       className={`inline-flex items-center justify-center gap-2 px-6 py-3 ${selectedPartner.color} text-white rounded-xl font-semibold hover:opacity-90 transition-opacity w-full sm:w-auto`}
                     >
-                      Als {selectedPartner.shortName} Partner bewerben
+                      {t.partners.partnerTypes.applyAs.replace('{type}', selectedPartner.shortName)}
                       <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>
@@ -300,7 +307,7 @@ export default function PartnersPage() {
                     ))}
                     {tier.benefits.length > 4 && (
                       <li className="text-xs text-gray-400">
-                        +{tier.benefits.length - 4} weitere Benefits
+                        {t.partners.tiers.moreBenefits.replace('{count}', String(tier.benefits.length - 4))}
                       </li>
                     )}
                   </ul>

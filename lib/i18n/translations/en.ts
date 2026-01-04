@@ -1469,6 +1469,270 @@ export const en: TranslationKeys = {
       applyButton: 'Apply as Partner',
       consultation: 'Book consultation',
     },
+    // Partner Types Data
+    types: {
+      referral: {
+        name: 'Referral Partner',
+        shortName: 'Referral',
+        description: 'Recommend CUTO to your network and earn attractive commissions for every successful deal.',
+        targetAudience: 'SAP freelancers, independent consultants, project managers',
+        idealFor: [
+          'SAP consultants with broad customer networks',
+          'Freelancers in the SAP community',
+          'Former SAP employees',
+          'Project managers with enterprise contacts',
+        ],
+        requirements: [
+          'No minimum requirements',
+          'Simple online registration',
+          'Basic understanding of SAP projects',
+        ],
+        benefits: [
+          '20% commission on first year revenue',
+          '10% recurring revenue share (year 2+)',
+          'Personal tracking link',
+          'Monthly payouts',
+          'Access to partner portal',
+          'Co-branded marketing materials',
+        ],
+        commission: {
+          firstYear: '20%',
+          recurring: '10%',
+          bonus: '€1,000 bonus from 3 deals/quarter',
+        },
+      },
+      reseller: {
+        name: 'Reseller Partner',
+        shortName: 'Reseller',
+        description: 'Distribute CUTO as part of your portfolio and benefit from attractive margins and recurring revenue.',
+        targetAudience: 'Small and medium SAP consulting companies',
+        idealFor: [
+          'SAP consultancies with 5-50 consultants',
+          'IT system houses with SAP focus',
+          'Regional SAP service providers',
+          'Boutique consulting for mid-market',
+        ],
+        requirements: [
+          'At least 2 certified CUTO consultants',
+          'Proof of SAP project experience',
+          'Annual revenue commitment',
+          'Participation in partner onboarding',
+        ],
+        benefits: [
+          '25-30% margin on licenses',
+          '15% recurring revenue share',
+          'Deal registration with price protection',
+          'Own customer contracts',
+          'White-label options available',
+          'Priority support (< 4h response)',
+          'Access to beta features',
+        ],
+        commission: {
+          firstYear: '25-30%',
+          recurring: '15%',
+          bonus: 'Deal registration bonus up to €5,000',
+        },
+      },
+      solution: {
+        name: 'Solution Partner',
+        shortName: 'Solution',
+        description: 'Strategic partnership for large consulting firms with joint go-to-market activities and co-selling.',
+        targetAudience: 'Large SAP consulting firms and system integrators',
+        idealFor: [
+          'Top-tier SAP consultancies',
+          'Global system integrators',
+          'Big 4 consulting firms',
+          'SAP Gold Partners',
+        ],
+        requirements: [
+          'At least 10 certified CUTO consultants',
+          'Proven S/4HANA project experience',
+          'Annual revenue commitment from €100k',
+          'Joint business plan',
+          'Executive sponsorship',
+        ],
+        benefits: [
+          'Individual revenue share model',
+          'Co-selling with CUTO sales team',
+          'Joint marketing campaigns',
+          'RFP support',
+          'Dedicated partner manager',
+          'Quarterly business reviews',
+          'Early access to roadmap features',
+          'Joint case studies & PR',
+          'Preferential pricing for large projects',
+        ],
+        commission: {
+          firstYear: 'Individual',
+          recurring: 'Revenue Share',
+          bonus: 'Co-Selling Accelerator',
+        },
+      },
+      technology: {
+        name: 'Technology Partner',
+        shortName: 'Technology',
+        description: 'Integrate your solution with CUTO and unlock new markets together through technological synergies.',
+        targetAudience: 'Software vendors in the SAP ecosystem',
+        idealFor: [
+          'SAP add-on vendors',
+          'Project management tool providers',
+          'DevOps & ALM platforms',
+          'Data and analytics providers',
+        ],
+        requirements: [
+          'Complementary product offering',
+          'Technical integration team',
+          'Shared target audience',
+          'API integration capability',
+        ],
+        benefits: [
+          'Bidirectional lead sharing',
+          'Co-marketing budget',
+          'Marketplace listing',
+          'API access and technical support',
+          'Joint webinars & events',
+          'Integration showcase',
+          'Cross-promotion in newsletter',
+        ],
+        commission: {
+          firstYear: 'Lead Sharing',
+          recurring: 'Cross-Referral',
+        },
+      },
+    },
+    // Partner Tiers Data
+    tierLevels: {
+      registered: {
+        name: 'Registered',
+        benefits: [
+          'Partner portal access',
+          'Basic training materials',
+          'Standard support',
+          'Partner newsletter',
+        ],
+      },
+      silver: {
+        name: 'Silver',
+        benefits: [
+          'All Registered benefits',
+          '+5% additional margin',
+          'Priority support (< 8h)',
+          'Quarterly partner calls',
+          'Marketing materials package',
+          'Partner directory listing',
+        ],
+      },
+      gold: {
+        name: 'Gold',
+        benefits: [
+          'All Silver benefits',
+          '+10% additional margin',
+          'Priority support (< 4h)',
+          'Dedicated partner manager',
+          'Co-marketing budget (€5k/year)',
+          'Beta feature access',
+          'Joint webinars',
+        ],
+      },
+      platinum: {
+        name: 'Platinum',
+        benefits: [
+          'All Gold benefits',
+          '+15% additional margin',
+          'Premium support (< 2h, 24/7)',
+          'Executive sponsor at CUTO',
+          'Co-marketing budget (€15k/year)',
+          'Early roadmap access',
+          'Joint press releases',
+          'Exclusive partner events',
+          'Custom feature requests',
+        ],
+      },
+    },
+    // General Benefits
+    generalBenefits: [
+      {
+        icon: '💰',
+        title: 'Attractive Commissions',
+        description: 'Up to 30% margin on deals and recurring revenue shares for long-term income.',
+      },
+      {
+        icon: '📈',
+        title: 'Growing Market',
+        description: 'The SAP S/4HANA transformation market is growing rapidly – position yourself as an expert.',
+      },
+      {
+        icon: '🎓',
+        title: 'Free Certifications',
+        description: 'Become a CUTO-certified consultant with our comprehensive training program.',
+      },
+      {
+        icon: '🛠️',
+        title: 'Sales & Marketing Support',
+        description: 'Ready-made presentations, case studies, and co-branded materials for your pitches.',
+      },
+      {
+        icon: '🤝',
+        title: 'Dedicated Support',
+        description: 'Your personal partner manager supports you with deals and strategic questions.',
+      },
+      {
+        icon: '🚀',
+        title: 'Fast Onboarding',
+        description: 'From application to active partner in just 2 weeks – we make it easy for you.',
+      },
+    ],
+    // Testimonials
+    partnerTestimonials: [
+      {
+        quote: 'As a freelancer, I have earned over €45,000 in commissions in the last 12 months – simply through referrals in my network. CUTO practically sells itself.',
+        author: 'Thomas Müller',
+        role: 'SAP Senior Consultant (Freelancer)',
+        company: 'Self-employed',
+        partnerType: 'referral',
+      },
+      {
+        quote: 'The partnership with CUTO has perfectly complemented our service portfolio. We now offer end-to-end SAP transformation solutions and have increased our revenue by 40%.',
+        author: 'Dr. Sandra Weber',
+        role: 'Managing Partner',
+        company: 'Alpine Consulting GmbH',
+        partnerType: 'reseller',
+      },
+      {
+        quote: 'The co-selling model works excellently. On complex RFPs, we work hand in hand with the CUTO team – this convinces customers and accelerates the sales cycle.',
+        author: 'Michael Hoffmann',
+        role: 'Director SAP Practice',
+        company: 'Global Systems AG',
+        partnerType: 'solution',
+      },
+    ],
+    // FAQ
+    faqItems: [
+      {
+        question: 'How quickly can I start earning?',
+        answer: 'After registration, you immediately receive your personal tracking link. As soon as a customer you referred signs a contract and the first payment is made, your commission is due. For enterprise deals, the sales cycle can take 3-6 months.',
+      },
+      {
+        question: 'Is there a minimum contract term?',
+        answer: 'No, as a Referral Partner you can stop at any time without notice. For Reseller and Solution Partners, individual agreements apply, typically with an annual term.',
+      },
+      {
+        question: 'How does deal registration work?',
+        answer: 'As a Reseller or Solution Partner, you can register potential deals via the partner portal. This gives you price protection for 90 days and prevents other partners from working on the same lead.',
+      },
+      {
+        question: 'What training is required?',
+        answer: 'Referral Partners do not require formal certification. For Reseller and Solution Partners, we offer a free online certification program (approx. 8 hours) as well as optional in-person training.',
+      },
+      {
+        question: 'Can I become a Reseller as a freelancer later?',
+        answer: 'Yes, many of our most successful partners started as Referral Partners and have grown. Once you meet the requirements, you can upgrade and benefit from better conditions.',
+      },
+      {
+        question: 'Are there exclusive sales territories?',
+        answer: 'For Platinum Partners, we can arrange exclusivity agreements in certain regions or industries. This is negotiated individually and requires appropriate revenue commitments.',
+      },
+    ],
   },
 
   contact: {
