@@ -1610,23 +1610,244 @@ export const zh: TranslationKeys = {
         allUseCases: '← 所有用例',
       },
     },
+    // Categories
     categories: {
-      'project-planning': { name: '', description: '' },
-      'templates': { name: '', description: '' },
-      'dashboards': { name: '', description: '' },
-      'migration': { name: '', description: '' },
-      'cutover': { name: '', description: '' },
-      'risk-management': { name: '', description: '' },
-      'team-management': { name: '', description: '' },
-      'reporting': { name: '', description: '' },
+      'project-planning': {
+        name: '项目规划',
+        description: '规划阶段、冲刺和里程碑',
+      },
+      'templates': {
+        name: '模板',
+        description: '创建和使用模板',
+      },
+      'dashboards': {
+        name: '仪表板',
+        description: '可视化KPI和报告',
+      },
+      'migration': {
+        name: '数据迁移',
+        description: '以结构化方式迁移数据',
+      },
+      'cutover': {
+        name: '切换',
+        description: '成功执行上线',
+      },
+      'risk-management': {
+        name: '风险管理',
+        description: '识别和管理风险',
+      },
+      'team-management': {
+        name: '团队与资源',
+        description: '管理团队和角色',
+      },
+      'reporting': {
+        name: '报告',
+        description: '创建报告和导出',
+      },
     },
+    // Use Case Items
     items: {
-      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'phase-in-sprints-aufteilen': {
+        title: '如何将一个阶段划分为多个冲刺？',
+        description: '学习如何有效地将SAP项目阶段划分为可管理的冲刺——以获得更好的概览和敏捷的工作方式。',
+        content: `## 概述
+
+在复杂的SAP项目中，单个阶段可能很快变得难以管理。将其划分为冲刺有助于更好地跟踪进度并保持团队的专注。
+
+## 为什么在SAP项目中使用冲刺？
+
+- **更好的概览**: 较小的工作包更易于管理
+- **定期反馈**: 每个冲刺后都可以审查结果
+- **灵活性**: 可以更快地进行调整
+- **激励**: 短时间内取得可见的进展
+
+## 先决条件
+
+在开始之前，请确保：
+- 该阶段已在CUTO中创建
+- 该阶段的活动已定义
+- 团队已分配到该阶段`,
+        steps: [
+          { title: '选择阶段', description: '导航到您项目中的所需阶段。单击阶段菜单并选择“冲刺计划”。' },
+          { title: '设置冲刺持续时间', description: '定义标准冲刺长度（通常为2-4周）。CUTO会根据阶段持续时间自动计算可能的冲刺次数。' },
+          { title: '分配活动', description: '将活动拖放到相应的冲刺中。CUTO会显示每个冲刺的工作量。' },
+          { title: '检查依赖关系', description: '如果具有依赖关系的活动计划顺序错误，CUTO会自动向您发出警告。' },
+          { title: '定义冲刺目标', description: '为每个冲刺添加一个明确的目标。这有助于团队保持专注。' },
+        ],
+        proTips: [
+          '为意外任务计划10-15%的缓冲时间。',
+          '保持冲刺计划会议简短——每个冲刺最多2小时。',
+          '使用冲刺回顾会议来不断改进。',
+          '避免在节假日或休假期间安排冲刺。',
+        ],
+        author: { name: '迈克尔·施密特博士', role: 'SAP项目专家' },
+        readingTime: '8分钟',
+      },
+      'sap-activate-template-nutzen': {
+        title: '自动创建SAP Activate模板',
+        description: '了解如何一键创建包含所有阶段和活动的完整SAP Activate项目。',
+        content: `## 什么是SAP Activate？
+
+SAP Activate是SAP官方的S/4HANA实施项目方法论。CUTO提供包含所有阶段和最佳实践的预构建模板。
+
+## 包含的阶段
+
+1. **Discover** - 项目初始化和范围界定
+2. **Prepare** - 项目设置和团队建设
+3. **Explore** - 适应性-差距分析和设计
+4. **Realize** - 配置和开发
+5. **Deploy** - 测试和上线
+6. **Run** - 超级支持和优化`,
+        steps: [
+          { title: '创建新项目', description: '单击“新项目”并选择“从模板创建”。' },
+          { title: '选择SAP Activate', description: '从可用模板中选择“SAP Activate for S/4HANA”。' },
+          { title: '输入项目数据', description: '输入项目名称、开始日期和计划的上线日期。CUTO会自动计算阶段持续时间。' },
+          { title: '自定义模板', description: '根据您的需要调整模板——删除不需要的活动或添加您自己的活动。' },
+        ],
+        proTips: [
+          '为将来的项目保存自定义模板。',
+          '使用估算值作为起点，并根据您的经验进行调整。',
+          '将模板与您的标准角色链接，以加快资源规划。',
+        ],
+        author: { name: '萨拉·韦伯', role: 'SAP顾问' },
+        readingTime: '5分钟',
+      },
+      'management-dashboard-erstellen': {
+        title: '为管理层创建KPI仪表板',
+        description: '创建有意义的仪表板，为管理层提供项目状态的快速概览。',
+        content: `## 为什么需要管理仪表板？
+
+管理层需要与项目团队不同的项目视图。一个好的管理仪表板显示：
+
+- **项目状态一目了然**（红绿灯系统）
+- **预算与实际成本**
+- **里程碑概览**
+- **主要风险**
+- **资源利用率**
+
+## 最佳实践
+
+- 少即是多：每个仪表板最多6-8个KPI
+- 一致地使用颜色（红/黄/绿）
+- 显示趋势，而不仅仅是当前值
+- 定期更新仪表板`,
+        steps: [
+          { title: '打开仪表板区域', description: '导航到“仪表板”并单击“创建新仪表板”。' },
+          { title: '选择布局', description: '选择预定义的布局或创建自己的网格。' },
+          { title: '添加小部件', description: '将所需的小部件拖到仪表板上：项目状态、预算图表、里程碑等。' },
+          { title: '配置过滤器', description: '为时间段、项目或团队配置全局过滤器。' },
+          { title: '分享', description: '与管理团队共享仪表板或将其导出为PDF。' },
+        ],
+        proTips: [
+          '为不同的利益相关者群体创建单独的仪表板。',
+          '使用自动刷新功能进行实时演示。',
+          '为离线会议将仪表板导出为PDF。',
+        ],
+        author: { name: '托马斯·穆勒', role: 'PMO负责人' },
+        readingTime: '7分钟',
+      },
+      'go-live-checkliste': {
+        title: '创建和管理上线检查清单',
+        description: '结构化的上线检查清单对于成功的切换至关重要。了解如何在CUTO中创建一个。',
+        content: `## 上线检查清单的重要性
+
+上线是SAP项目中最关键的时刻。一个结构良好的检查清单有助于：
+
+- 不遗漏任何事情
+- 明确定义责任
+- 实时跟踪进度
+- 快速应对问题
+
+## 典型的检查清单区域
+
+1. **上线前**（T-7到T-1）
+2. **切换周末**（T-0）
+3. **上线后/超级支持**（T+1到T+14）`,
+        steps: [
+          { title: '打开切换模块', description: '导航到您项目的切换区域。' },
+          { title: '从模板创建检查清单', description: '选择一个预定义的上线检查清单或创建一个新的。' },
+          { title: '添加任务', description: '添加所有必要的任务，包括时间窗口和负责人。' },
+          { title: '定义依赖关系', description: '链接相互依赖的任务（例如，“关闭系统”在“开始数据迁移”之前）。' },
+          { title: '生成运行手册', description: '将检查清单导出为切换团队的详细运行手册。' },
+        ],
+        proTips: [
+          '在实际切换上线之前进行一次切换演练（干运行）。',
+          '定义明确的回滚标准和程序。',
+          '为意外问题计划足够的缓冲时间。',
+          '确保所有利益相关者都了解升级路径。',
+        ],
+        author: { name: '迈克尔·施密特博士', role: 'SAP项目专家' },
+        readingTime: '6分钟',
+      },
+      'risiken-identifizieren-tracken': {
+        title: '识别和跟踪项目风险',
+        description: '积极的风险管理是项目成功的关键。了解如何在CUTO中捕获和监控风险。',
+        content: `## 为什么需要风险管理？
+
+SAP项目很复杂，有许多潜在的风险来源：
+
+- 技术风险（集成、性能）
+- 组织风险（变更管理、资源）
+- 时间线风险（延迟、依赖关系）
+- 预算风险（范围蔓延、意外成本）
+
+## 风险矩阵
+
+CUTO使用标准化的风险矩阵：
+- **概率**: 低/中/高
+- **影响**: 低/中/高/关键
+- **风险评分**: 自动计算`,
+        steps: [
+          { title: '打开风险登记册', description: '导航到您项目中的“风险与问题”。' },
+          { title: '捕获新风险', description: '单击“添加风险”并详细描述风险。' },
+          { title: '评估风险', description: '评估概率和影响。CUTO会计算风险评分。' },
+          { title: '定义措施', description: '添加预防和应对措施并分配负责人。' },
+          { title: '定期审查', description: '使用风险审查功能定期更新风险。' },
+        ],
+        proTips: [
+          '在项目开始时与所有利益相关者举行风险研讨会。',
+          '优先处理前10大风险并专注于它们。',
+          '为更好的透明度，将风险与受影响的活动联系起来。',
+          '使用风险仪表板进行指导委员会会议。',
+        ],
+        author: { name: '萨拉·韦伯', role: 'SAP顾问' },
+        readingTime: '5分钟',
+      },
+      'datenmigration-planen': {
+        title: '系统地规划数据迁移',
+        description: '成功的数据迁移需要仔细的规划。了解CUTO如何支持您。',
+        content: `## 数据迁移的挑战
+
+数据迁移通常是SAP项目中被低估的部分：
+
+- **数据质量**: 遗留数据通常不一致
+- **映射**: 将旧结构映射到新结构
+- **数据量**: 高效地迁移大量数据
+- **验证**: 确保所有数据都正确
+
+## CUTO迁移模块
+
+CUTO为以下方面提供专门功能：
+- 迁移规划和跟踪
+- 对象目录管理
+- 测试运行文档
+- 切换协调`,
+        steps: [
+          { title: '捕获迁移对象', description: '创建一个所有待迁移对象的目录（客户、供应商、物料等）。' },
+          { title: '分配责任', description: '为每个对象分配一个业务和技术负责人。' },
+          { title: '规划测试运行', description: '在最终运行之前规划多次测试迁移。' },
+          { title: '跟踪进度', description: '使用迁移仪表板监控所有对象的状态。' },
+          { title: '切换集成', description: '将迁移活动与您的上线检查清单联系起来。' },
+        ],
+        proTips: [
+          '尽早开始数据清理——这通常比计划的要长。',
+          '为以后的可追溯性，记录所有映射规则。',
+          '至少计划3次完整的测试迁移。',
+          '尽早让业务部门参与数据验证。',
+        ],
+        author: { name: '托马斯·穆勒', role: 'PMO负责人' },
+        readingTime: '9分钟',
+      },
     },
   },
 

@@ -1608,25 +1608,244 @@ export const cs: TranslationKeys = {
         allUseCases: '← Všechny případy užití',
       },
     },
-    // Categories - will fallback to German
+    // Categories
     categories: {
-      'project-planning': { name: '', description: '' },
-      'templates': { name: '', description: '' },
-      'dashboards': { name: '', description: '' },
-      'migration': { name: '', description: '' },
-      'cutover': { name: '', description: '' },
-      'risk-management': { name: '', description: '' },
-      'team-management': { name: '', description: '' },
-      'reporting': { name: '', description: '' },
+      'project-planning': {
+        name: 'Plánování projektu',
+        description: 'Plánování fází, sprintů a milníků',
+      },
+      'templates': {
+        name: 'Šablony',
+        description: 'Vytváření a používání šablon',
+      },
+      'dashboards': {
+        name: 'Dashboardy',
+        description: 'Vizualizace KPI a reportů',
+      },
+      'migration': {
+        name: 'Migrace dat',
+        description: 'Strukturovaná migrace dat',
+      },
+      'cutover': {
+        name: 'Cutover',
+        description: 'Úspěšné provedení Go-Live',
+      },
+      'risk-management': {
+        name: 'Řízení rizik',
+        description: 'Identifikace a řízení rizik',
+      },
+      'team-management': {
+        name: 'Tým a zdroje',
+        description: 'Správa týmů a rolí',
+      },
+      'reporting': {
+        name: 'Reporting',
+        description: 'Vytváření reportů a exportů',
+      },
     },
-    // Items - will fallback to German
+    // Use Case Items
     items: {
-      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'phase-in-sprints-aufteilen': {
+        title: 'Jak rozdělit fázi na sprinty?',
+        description: 'Naučte se, jak efektivně rozdělit fázi SAP projektu na zvládnutelné sprinty – pro lepší přehled a agilní práci.',
+        content: `## Přehled
+
+V komplexních SAP projektech se může jedna fáze rychle stát nepřehlednou. Rozdělení na sprinty pomáhá lépe sledovat postup a udržet tým soustředěný.
+
+## Proč sprinty v SAP projektech?
+
+- **Lepší přehled**: Menší pracovní balíčky se snadněji spravují
+- **Pravidelná zpětná vazba**: Po každém sprintu lze zkontrolovat výsledky
+- **Flexibilita**: Úpravy lze provádět rychleji
+- **Motivace**: Viditelný pokrok v krátkých časových úsecích
+
+## Předpoklady
+
+Než začnete, ujistěte se, že:
+- Fáze je již vytvořena v CUTO
+- Aktivity fáze jsou definovány
+- Tým je přiřazen k fázi`,
+        steps: [
+          { title: 'Vybrat fázi', description: 'Přejděte na požadovanou fázi ve svém projektu. Klikněte na menu fáze a vyberte "Plánování sprintu".' },
+          { title: 'Nastavit délku sprintu', description: 'Definujte standardní délku sprintu (typicky: 2-4 týdny). CUTO automaticky vypočítá počet možných sprintů na základě délky fáze.' },
+          { title: 'Přiřadit aktivity', description: 'Přetáhněte aktivity do příslušných sprintů. CUTO vám ukáže vytížení na sprint.' },
+          { title: 'Zkontrolovat závislosti', description: 'CUTO vás automaticky upozorní, pokud jsou aktivity se závislostmi naplánovány ve špatném pořadí.' },
+          { title: 'Definovat cíle sprintu', description: 'Přidejte pro každý sprint jasný cíl. To pomůže týmu udržet soustředění.' },
+        ],
+        proTips: [
+          'Naplánujte si rezervu 10-15 % na nepředvídané úkoly.',
+          'Udržujte plánování sprintu krátké – maximálně 2 hodiny na sprint.',
+          'Využívejte retrospektivy sprintu k neustálému zlepšování.',
+          'Vyhněte se sprintům během svátků nebo dovolených.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'Expert na SAP projekty' },
+        readingTime: '8 min',
+      },
+      'sap-activate-template-nutzen': {
+        title: 'Automaticky vytvořit šablonu SAP Activate',
+        description: 'Naučte se, jak jedním kliknutím vytvořit kompletní projekt SAP Activate se všemi fázemi a aktivitami.',
+        content: `## Co je SAP Activate?
+
+SAP Activate je oficiální projektová metodika SAP pro implementace S/4HANA. CUTO nabízí předpřipravené šablony, které obsahují všechny fáze a osvědčené postupy.
+
+## Zahrnuté fáze
+
+1. **Discover** - Inicializace a vymezení projektu
+2. **Prepare** - Nastavení projektu a sestavení týmu
+3. **Explore** - Analýza Fit-Gap a návrh
+4. **Realize** - Konfigurace a vývoj
+5. **Deploy** - Testování a Go-Live
+6. **Run** - Hypercare a optimalizace`,
+        steps: [
+          { title: 'Vytvořit nový projekt', description: 'Klikněte na "Nový projekt" a vyberte "Vytvořit ze šablony".' },
+          { title: 'Vybrat SAP Activate', description: 'Vyberte "SAP Activate for S/4HANA" z dostupných šablon.' },
+          { title: 'Zadat údaje o projektu', description: 'Zadejte název projektu, datum zahájení a plánovaný Go-Live. CUTO automaticky vypočítá délku fází.' },
+          { title: 'Přizpůsobit šablonu', description: 'Přizpůsobte šablonu svým potřebám – odstraňte nepotřebné aktivity nebo přidejte vlastní.' },
+        ],
+        proTips: [
+          'Uložte si přizpůsobené šablony pro budoucí projekty.',
+          'Použijte odhady jako výchozí bod a upravte je na základě svých zkušeností.',
+          'Propojte šablonu se svými standardními rolemi pro rychlejší plánování zdrojů.',
+        ],
+        author: { name: 'Sarah Weber', role: 'SAP konzultant' },
+        readingTime: '5 min',
+      },
+      'management-dashboard-erstellen': {
+        title: 'Vytvořit KPI dashboard pro management',
+        description: 'Vytvořte smysluplné dashboardy, které managementu poskytnou rychlý přehled o stavu projektu.',
+        content: `## Proč dashboardy pro management?
+
+Management potřebuje jiný pohled na projekt než projektový tým. Dobrý dashboard pro management ukazuje:
+
+- **Stav projektu na první pohled** (semaforový systém)
+- **Rozpočet vs. skutečné náklady**
+- **Přehled milníků**
+- **Hlavní rizika**
+- **Využití zdrojů**
+
+## Osvědčené postupy
+
+- Méně je více: Maximálně 6-8 KPI na dashboard
+- Používejte barvy konzistentně (červená/žlutá/zelená)
+- Zobrazujte trendy, nejen aktuální hodnoty
+- Pravidelně aktualizujte dashboardy`,
+        steps: [
+          { title: 'Otevřít oblast dashboardů', description: 'Přejděte na "Dashboardy" a klikněte na "Vytvořit nový dashboard".' },
+          { title: 'Zvolit rozvržení', description: 'Vyberte předdefinované rozvržení nebo si vytvořte vlastní mřížku.' },
+          { title: 'Přidat widgety', description: 'Přetáhněte požadované widgety na dashboard: stav projektu, graf rozpočtu, milníky atd.' },
+          { title: 'Konfigurovat filtry', description: 'Konfigurujte globální filtry pro časové období, projekty nebo týmy.' },
+          { title: 'Sdílet', description: 'Sdílejte dashboard s management týmem nebo ho exportujte jako PDF.' },
+        ],
+        proTips: [
+          'Vytvořte samostatné dashboardy pro různé skupiny stakeholderů.',
+          'Využijte automatickou aktualizaci pro živé prezentace.',
+          'Exportujte dashboardy jako PDF pro offline schůzky.',
+        ],
+        author: { name: 'Thomas Müller', role: 'Vedoucí PMO' },
+        readingTime: '7 min',
+      },
+      'go-live-checkliste': {
+        title: 'Vytvořit a spravovat checklist pro Go-Live',
+        description: 'Strukturovaný checklist pro Go-Live je klíčový pro úspěšný cutover. Naučte se, jak ho vytvořit v CUTO.',
+        content: `## Důležitost checklistu pro Go-Live
+
+Go-Live je nejkritičtější okamžik SAP projektu. Dobře strukturovaný checklist pomáhá:
+
+- Na nic nezapomenout
+- Jasně definovat odpovědnosti
+- Sledovat pokrok v reálném čase
+- Rychle reagovat na problémy
+
+## Typické oblasti checklistu
+
+1. **Před Go-Live** (T-7 až T-1)
+2. **Víkend Cutoveru** (T-0)
+3. **Po Go-Live / Hypercare** (T+1 až T+14)`,
+        steps: [
+          { title: 'Otevřít modul Cutover', description: 'Přejděte do oblasti Cutover vašeho projektu.' },
+          { title: 'Vytvořit checklist ze šablony', description: 'Vyberte předdefinovaný checklist pro Go-Live nebo vytvořte nový.' },
+          { title: 'Přidat úkoly', description: 'Přidejte všechny potřebné úkoly s časovými okny a odpovědnými osobami.' },
+          { title: 'Definovat závislosti', description: 'Propojte úkoly, které na sobě závisí (např. "Vypnout systém" před "Spustit migraci dat").' },
+          { title: 'Generovat runbook', description: 'Exportujte checklist jako podrobný runbook pro cutover tým.' },
+        ],
+        proTips: [
+          'Proveďte cvičení cutoveru (dry run) před skutečným Go-Live.',
+          'Definujte jasná kritéria a postupy pro rollback.',
+          'Naplánujte dostatečnou rezervu pro nepředvídané problémy.',
+          'Ujistěte se, že všichni stakeholdeři znají eskalační cesty.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'Expert na SAP projekty' },
+        readingTime: '6 min',
+      },
+      'risiken-identifizieren-tracken': {
+        title: 'Identifikovat a sledovat rizika projektu',
+        description: 'Proaktivní řízení rizik je klíčem k úspěchu projektu. Naučte se, jak zaznamenávat a monitorovat rizika v CUTO.',
+        content: `## Proč řízení rizik?
+
+SAP projekty jsou komplexní a mají mnoho potenciálních zdrojů rizik:
+
+- Technická rizika (integrace, výkon)
+- Organizační rizika (řízení změn, zdroje)
+- Časová rizika (zpoždění, závislosti)
+- Rozpočtová rizika (rozšiřování rozsahu, nepředvídané náklady)
+
+## Matice rizik
+
+CUTO používá standardizovanou matici rizik:
+- **Pravděpodobnost**: Nízká / Střední / Vysoká
+- **Dopad**: Nízký / Střední / Vysoký / Kritický
+- **Skóre rizika**: Automaticky vypočítáno`,
+        steps: [
+          { title: 'Otevřít registr rizik', description: 'Přejděte na "Rizika a problémy" ve svém projektu.' },
+          { title: 'Zaznamenat nové riziko', description: 'Klikněte na "Přidat riziko" a podrobně popište riziko.' },
+          { title: 'Provést hodnocení', description: 'Ohodnoťte pravděpodobnost a dopad. CUTO vypočítá skóre rizika.' },
+          { title: 'Definovat opatření', description: 'Přidejte preventivní a reaktivní opatření a přiřaďte odpovědné osoby.' },
+          { title: 'Pravidelně revidovat', description: 'Použijte funkci revize rizik k pravidelné aktualizaci rizik.' },
+        ],
+        proTips: [
+          'Na začátku projektu uspořádejte workshop o rizicích se všemi stakeholdery.',
+          'Prioritizujte 10 hlavních rizik a soustřeďte se na ně.',
+          'Pro lepší transparentnost propojte rizika s dotčenými aktivitami.',
+          'Použijte dashboard rizik pro schůzky řídícího výboru.',
+        ],
+        author: { name: 'Sarah Weber', role: 'SAP konzultant' },
+        readingTime: '5 min',
+      },
+      'datenmigration-planen': {
+        title: 'Strukturovaně plánovat migraci dat',
+        description: 'Úspěšná migrace dat vyžaduje pečlivé plánování. Zjistěte, jak vás CUTO podporuje.',
+        content: `## Výzvy migrace dat
+
+Migrace dat je často podceňovanou součástí SAP projektu:
+
+- **Kvalita dat**: Starší data jsou často nekonzistentní
+- **Mapování**: Mapování starých struktur na nové
+- **Objem**: Efektivní migrace velkých objemů dat
+- **Validace**: Zajištění správnosti všech dat
+
+## Modul migrace CUTO
+
+CUTO nabízí specializované funkce pro:
+- Plánování a sledování migrace
+- Správu katalogu objektů
+- Dokumentaci testovacích cyklů
+- Koordinaci Cut-Overu`,
+        steps: [
+          { title: 'Zaznamenat migrační objekty', description: 'Vytvořte katalog všech objektů k migraci (zákazníci, dodavatelé, materiály atd.).' },
+          { title: 'Přiřadit odpovědnosti', description: 'Přiřaďte pro každý objekt funkčního a technického vlastníka.' },
+          { title: 'Naplánovat testovací cykly', description: 'Naplánujte několik testovacích migrací před finálním spuštěním.' },
+          { title: 'Sledovat pokrok', description: 'Použijte dashboard migrace k monitorování stavu všech objektů.' },
+          { title: 'Integrace Cutoveru', description: 'Propojte migrační aktivity s vaším checklistem pro Go-Live.' },
+        ],
+        proTips: [
+          'Začněte s čištěním dat brzy – obvykle to trvá déle, než se plánuje.',
+          'Zdokumentujte všechna mapovací pravidla pro pozdější sledovatelnost.',
+          'Naplánujte alespoň 3 kompletní testovací migrace.',
+          'Zapojte funkční oddělení do validace dat co nejdříve.',
+        ],
+        author: { name: 'Thomas Müller', role: 'Vedoucí PMO' },
+        readingTime: '9 min',
+      },
     },
   },
 

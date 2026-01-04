@@ -1425,8 +1425,8 @@ export const it: TranslationKeys = {
   },
 
   useCases: {
-    badge: 'Casi d\'uso & Tutorial',
-    title: 'CUTO nella pratica',
+    badge: 'Casi d\'uso e tutorial',
+    title: 'CUTO in pratica',
     subtitle: 'Scopri guide pratiche e video tutorial per casi d\'uso tipici nei progetti SAP. Dalla pianificazione del progetto fino al Go-Live.',
     searchPlaceholder: 'Cerca casi d\'uso...',
     featured: 'Casi d\'uso in evidenza',
@@ -1459,23 +1459,244 @@ export const it: TranslationKeys = {
         allUseCases: '← Tutti i casi d\'uso',
       },
     },
+    // Categories
     categories: {
-      'project-planning': { name: '', description: '' },
-      'templates': { name: '', description: '' },
-      'dashboards': { name: '', description: '' },
-      'migration': { name: '', description: '' },
-      'cutover': { name: '', description: '' },
-      'risk-management': { name: '', description: '' },
-      'team-management': { name: '', description: '' },
-      'reporting': { name: '', description: '' },
+      'project-planning': {
+        name: 'Pianificazione del progetto',
+        description: 'Pianificare fasi, sprint e milestone',
+      },
+      'templates': {
+        name: 'Template',
+        description: 'Creare e utilizzare template',
+      },
+      'dashboards': {
+        name: 'Dashboard',
+        description: 'Visualizzare KPI e report',
+      },
+      'migration': {
+        name: 'Migrazione dati',
+        description: 'Migrare i dati in modo strutturato',
+      },
+      'cutover': {
+        name: 'Cutover',
+        description: 'Eseguire il Go-Live con successo',
+      },
+      'risk-management': {
+        name: 'Gestione dei rischi',
+        description: 'Identificare e gestire i rischi',
+      },
+      'team-management': {
+        name: 'Team e Risorse',
+        description: 'Gestire team e ruoli',
+      },
+      'reporting': {
+        name: 'Reporting',
+        description: 'Creare report ed esportazioni',
+      },
     },
+    // Use Case Items
     items: {
-      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'phase-in-sprints-aufteilen': {
+        title: 'Come dividere una fase in sprint?',
+        description: 'Impara come dividere efficacemente una fase di un progetto SAP in sprint gestibili – per una migliore visione d\'insieme e un lavoro agile.',
+        content: `## Panoramica
+
+Nei progetti SAP complessi, una singola fase può diventare rapidamente confusionaria. La suddivisione in sprint aiuta a tracciare meglio i progressi e a mantenere il team concentrato.
+
+## Perché gli sprint nei progetti SAP?
+
+- **Migliore visione d'insieme**: I pacchetti di lavoro più piccoli sono più facili da gestire
+- **Feedback regolare**: I risultati possono essere revisionati dopo ogni sprint
+- **Flessibilità**: Gli adeguamenti possono essere fatti più rapidamente
+- **Motivazione**: Progressi visibili in brevi periodi
+
+## Prerequisiti
+
+Prima di iniziare, assicurati che:
+- La fase sia già stata creata in CUTO
+- Le attività della fase siano definite
+- Il team sia assegnato alla fase`,
+        steps: [
+          { title: 'Seleziona fase', description: 'Vai alla fase desiderata nel tuo progetto. Clicca sul menu della fase e seleziona "Pianificazione Sprint".' },
+          { title: 'Imposta durata dello sprint', description: 'Definisci la durata standard dello sprint (tipicamente: 2-4 settimane). CUTO calcola automaticamente il numero di sprint possibili in base alla durata della fase.' },
+          { title: 'Assegna attività', description: 'Trascina e rilascia le attività nei rispettivi sprint. CUTO ti mostra il carico di lavoro per sprint.' },
+          { title: 'Controlla dipendenze', description: 'CUTO ti avvisa automaticamente se le attività con dipendenze vengono pianificate nell\'ordine sbagliato.' },
+          { title: 'Definisci obiettivi dello sprint', description: 'Aggiungi un obiettivo chiaro per ogni sprint. Questo aiuta il team a rimanere concentrato.' },
+        ],
+        proTips: [
+          'Pianifica un buffer del 10-15% per compiti imprevisti.',
+          'Mantieni le pianificazioni degli sprint brevi – massimo 2 ore per sprint.',
+          'Usa le retrospettive degli sprint per migliorare continuamente.',
+          'Evita gli sprint durante le festività o i periodi di ferie.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'Esperto di progetti SAP' },
+        readingTime: '8 min',
+      },
+      'sap-activate-template-nutzen': {
+        title: 'Crea automaticamente un template SAP Activate',
+        description: 'Scopri come creare un progetto SAP Activate completo con tutte le fasi e le attività con un solo clic.',
+        content: `## Cos'è SAP Activate?
+
+SAP Activate è la metodologia di progetto ufficiale di SAP per le implementazioni S/4HANA. CUTO offre template pronti all'uso che contengono tutte le fasi e le migliori pratiche.
+
+## Fasi incluse
+
+1. **Discover** - Inizializzazione e scoping del progetto
+2. **Prepare** - Setup del progetto e formazione del team
+3. **Explore** - Analisi Fit-Gap e design
+4. **Realize** - Configurazione e sviluppo
+5. **Deploy** - Test e Go-Live
+6. **Run** - Hypercare e ottimizzazione`,
+        steps: [
+          { title: 'Crea nuovo progetto', description: 'Clicca su "Nuovo progetto" e seleziona "Crea da template".' },
+          { title: 'Seleziona SAP Activate', description: 'Scegli "SAP Activate for S/4HANA" dai template disponibili.' },
+          { title: 'Inserisci dati del progetto', description: 'Inserisci nome del progetto, data di inizio e Go-Live previsto. CUTO calcola automaticamente la durata delle fasi.' },
+          { title: 'Personalizza template', description: 'Adatta il template alle tue esigenze – rimuovi le attività non necessarie o aggiungine di tue.' },
+        ],
+        proTips: [
+          'Salva i template personalizzati per progetti futuri.',
+          'Usa le stime come punto di partenza e adattale in base alla tua esperienza.',
+          'Collega il template ai tuoi ruoli standard per una pianificazione delle risorse più rapida.',
+        ],
+        author: { name: 'Sarah Weber', role: 'Consulente SAP' },
+        readingTime: '5 min',
+      },
+      'management-dashboard-erstellen': {
+        title: 'Crea una dashboard KPI per il management',
+        description: 'Crea dashboard significative che diano al management una rapida panoramica dello stato del progetto.',
+        content: `## Perché le dashboard per il management?
+
+Il management ha bisogno di una visione diversa del progetto rispetto al team di progetto. Una buona dashboard per il management mostra:
+
+- **Stato del progetto a colpo d'occhio** (sistema a semaforo)
+- **Budget vs. costi effettivi**
+- **Panoramica delle milestone**
+- **Principali rischi**
+- **Utilizzo delle risorse**
+
+## Migliori pratiche
+
+- Meno è meglio: Massimo 6-8 KPI per dashboard
+- Usa i colori in modo coerente (Rosso/Giallo/Verde)
+- Mostra le tendenze, non solo i valori attuali
+- Aggiorna regolarmente le dashboard`,
+        steps: [
+          { title: 'Apri l\'area dashboard', description: 'Vai a "Dashboard" e clicca su "Crea nuova dashboard".' },
+          { title: 'Scegli layout', description: 'Seleziona un layout predefinito o crea la tua griglia personale.' },
+          { title: 'Aggiungi widget', description: 'Trascina i widget desiderati sulla dashboard: stato del progetto, grafico del budget, milestone, ecc.' },
+          { title: 'Configura filtri', description: 'Configura filtri globali per periodo, progetti o team.' },
+          { title: 'Condividi', description: 'Condividi la dashboard con il team di management o esportala come PDF.' },
+        ],
+        proTips: [
+          'Crea dashboard separate per diversi gruppi di stakeholder.',
+          'Usa l\'aggiornamento automatico per le presentazioni dal vivo.',
+          'Esporta le dashboard come PDF per le riunioni offline.',
+        ],
+        author: { name: 'Thomas Müller', role: 'Responsabile PMO' },
+        readingTime: '7 min',
+      },
+      'go-live-checkliste': {
+        title: 'Crea e gestisci la checklist di Go-Live',
+        description: 'Una checklist di Go-Live strutturata è fondamentale per un cutover di successo. Impara come crearla in CUTO.',
+        content: `## L'importanza di una checklist di Go-Live
+
+Il Go-Live è il momento più critico di un progetto SAP. Una checklist ben strutturata aiuta a:
+
+- Non dimenticare nulla
+- Definire chiaramente le responsabilità
+- Tracciare i progressi in tempo reale
+- Reagire rapidamente ai problemi
+
+## Aree tipiche della checklist
+
+1. **Pre-Go-Live** (da T-7 a T-1)
+2. **Weekend del Cutover** (T-0)
+3. **Post-Go-Live / Hypercare** (da T+1 a T+14)`,
+        steps: [
+          { title: 'Apri il modulo Cutover', description: 'Vai all\'area Cutover del tuo progetto.' },
+          { title: 'Crea checklist da template', description: 'Seleziona una checklist di Go-Live predefinita o creane una nuova.' },
+          { title: 'Aggiungi attività', description: 'Aggiungi tutte le attività necessarie con finestre temporali e responsabili.' },
+          { title: 'Definisci dipendenze', description: 'Collega le attività che dipendono l\'una dall\'altra (es. "Spegni sistema" prima di "Avvia migrazione dati").' },
+          { title: 'Genera runbook', description: 'Esporta la checklist come un runbook dettagliato per il team di cutover.' },
+        ],
+        proTips: [
+          'Esegui una simulazione di cutover (dry run) prima del vero Go-Live.',
+          'Definisci criteri e procedure di rollback chiari.',
+          'Pianifica un buffer sufficiente per problemi imprevisti.',
+          'Assicurati che tutti gli stakeholder conoscano i percorsi di escalation.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'Esperto di progetti SAP' },
+        readingTime: '6 min',
+      },
+      'risiken-identifizieren-tracken': {
+        title: 'Identificare e monitorare i rischi di progetto',
+        description: 'Una gestione proattiva dei rischi è la chiave per il successo del progetto. Impara come registrare e monitorare i rischi in CUTO.',
+        content: `## Perché la gestione dei rischi?
+
+I progetti SAP sono complessi e hanno molte potenziali fonti di rischio:
+
+- Rischi tecnici (integrazione, performance)
+- Rischi organizzativi (gestione del cambiamento, risorse)
+- Rischi di tempistica (ritardi, dipendenze)
+- Rischi di budget (scope creep, costi imprevisti)
+
+## Matrice dei rischi
+
+CUTO utilizza una matrice dei rischi standardizzata:
+- **Probabilità**: Bassa / Media / Alta
+- **Impatto**: Basso / Medio / Alto / Critico
+- **Punteggio di rischio**: Calcolato automaticamente`,
+        steps: [
+          { title: 'Apri il registro dei rischi', description: 'Vai a "Rischi e problemi" nel tuo progetto.' },
+          { title: 'Registra nuovo rischio', description: 'Clicca su "Aggiungi rischio" e descrivi il rischio in dettaglio.' },
+          { title: 'Esegui valutazione', description: 'Valuta probabilità e impatto. CUTO calcola il punteggio di rischio.' },
+          { title: 'Definisci misure', description: 'Aggiungi misure preventive e reattive e assegna i responsabili.' },
+          { title: 'Rivedi regolarmente', description: 'Usa la funzione di revisione dei rischi per aggiornarli regolarmente.' },
+        ],
+        proTips: [
+          'Conduci un workshop sui rischi con tutti gli stakeholder all\'inizio del progetto.',
+          'Dai priorità ai 10 principali rischi e concentrati su di essi.',
+          'Collega i rischi alle attività interessate per una migliore trasparenza.',
+          'Usa il dashboard dei rischi per le riunioni del comitato direttivo.',
+        ],
+        author: { name: 'Sarah Weber', role: 'Consulente SAP' },
+        readingTime: '5 min',
+      },
+      'datenmigration-planen': {
+        title: 'Pianificare la migrazione dei dati in modo strutturato',
+        description: 'Una migrazione dei dati di successo richiede una pianificazione attenta. Scopri come CUTO ti supporta.',
+        content: `## Sfide della migrazione dei dati
+
+La migrazione dei dati è spesso la parte sottovalutata di un progetto SAP:
+
+- **Qualità dei dati**: I dati legacy sono spesso incoerenti
+- **Mapping**: Mappare le vecchie strutture alle nuove
+- **Volume**: Migrare grandi volumi di dati in modo efficiente
+- **Validazione**: Assicurarsi che tutti i dati siano corretti
+
+## Modulo di migrazione CUTO
+
+CUTO offre funzioni specializzate per:
+- Pianificazione e tracciamento della migrazione
+- Gestione del catalogo oggetti
+- Documentazione dei cicli di test
+- Coordinamento del Cut-Over`,
+        steps: [
+          { title: 'Registra oggetti di migrazione', description: 'Crea un catalogo di tutti gli oggetti da migrare (clienti, fornitori, materiali, ecc.).' },
+          { title: 'Assegna responsabilità', description: 'Assegna un responsabile funzionale e tecnico per ogni oggetto.' },
+          { title: 'Pianifica cicli di test', description: 'Pianifica diverse migrazioni di prova prima di quella finale.' },
+          { title: 'Traccia i progressi', description: 'Usa il dashboard di migrazione per monitorare lo stato di tutti gli oggetti.' },
+          { title: 'Integrazione del Cutover', description: 'Collega le attività di migrazione alla tua checklist di Go-Live.' },
+        ],
+        proTips: [
+          'Inizia presto con la pulizia dei dati – di solito richiede più tempo del previsto.',
+          'Documenta tutte le regole di mapping per una tracciabilità successiva.',
+          'Pianifica almeno 3 migrazioni di test complete.',
+          'Coinvolgi i dipartimenti funzionali fin dall\'inizio nella validazione dei dati.',
+        ],
+        author: { name: 'Thomas Müller', role: 'Responsabile PMO' },
+        readingTime: '9 min',
+      },
     },
   },
 

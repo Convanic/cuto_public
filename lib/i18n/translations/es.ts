@@ -1459,23 +1459,244 @@ export const es: TranslationKeys = {
         allUseCases: '← Todos los casos de uso',
       },
     },
+    // Categories
     categories: {
-      'project-planning': { name: '', description: '' },
-      'templates': { name: '', description: '' },
-      'dashboards': { name: '', description: '' },
-      'migration': { name: '', description: '' },
-      'cutover': { name: '', description: '' },
-      'risk-management': { name: '', description: '' },
-      'team-management': { name: '', description: '' },
-      'reporting': { name: '', description: '' },
+      'project-planning': {
+        name: 'Planificación de proyectos',
+        description: 'Planificar fases, sprints e hitos',
+      },
+      'templates': {
+        name: 'Plantillas',
+        description: 'Crear y usar plantillas',
+      },
+      'dashboards': {
+        name: 'Paneles',
+        description: 'Visualizar KPIs e informes',
+      },
+      'migration': {
+        name: 'Migración de datos',
+        description: 'Migrar datos de forma estructurada',
+      },
+      'cutover': {
+        name: 'Cutover',
+        description: 'Ejecutar Go-Live con éxito',
+      },
+      'risk-management': {
+        name: 'Gestión de riesgos',
+        description: 'Identificar y gestionar riesgos',
+      },
+      'team-management': {
+        name: 'Equipo y Recursos',
+        description: 'Gestionar equipos y roles',
+      },
+      'reporting': {
+        name: 'Informes',
+        description: 'Crear informes y exportaciones',
+      },
     },
+    // Use Case Items
     items: {
-      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
-      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'phase-in-sprints-aufteilen': {
+        title: '¿Cómo dividir una fase en sprints?',
+        description: 'Aprenda a dividir eficazmente una fase de proyecto SAP en sprints manejables, para una mejor visión general y un trabajo ágil.',
+        content: `## Visión general
+
+En proyectos SAP complejos, una sola fase puede volverse rápidamente confusa. La división en sprints ayuda a seguir mejor el progreso y a mantener al equipo enfocado.
+
+## ¿Por qué sprints en proyectos SAP?
+
+- **Mejor visión general**: Los paquetes de trabajo más pequeños son más fáciles de gestionar
+- **Feedback regular**: Después de cada sprint se pueden revisar los resultados
+- **Flexibilidad**: Se pueden realizar ajustes más rápidamente
+- **Motivación**: Progreso visible en períodos cortos
+
+## Requisitos
+
+Antes de comenzar, asegúrese de que:
+- La fase ya está creada en CUTO
+- Las actividades de la fase están definidas
+- El equipo está asignado a la fase`,
+        steps: [
+          { title: 'Seleccionar fase', description: 'Navegue a la fase deseada en su proyecto. Haga clic en el menú de la fase y seleccione "Planificación de Sprint".' },
+          { title: 'Establecer duración del sprint', description: 'Defina la duración estándar del sprint (típicamente: 2-4 semanas). CUTO calcula automáticamente el número de sprints posibles basándose en la duración de la fase.' },
+          { title: 'Asignar actividades', description: 'Arrastre y suelte las actividades en los sprints correspondientes. CUTO le muestra la carga de trabajo por sprint.' },
+          { title: 'Comprobar dependencias', description: 'CUTO le advierte automáticamente si las actividades con dependencias se planifican en el orden incorrecto.' },
+          { title: 'Definir objetivos del sprint', description: 'Añada un objetivo claro para cada sprint. Esto ayuda al equipo a mantenerse enfocado.' },
+        ],
+        proTips: [
+          'Planifique un colchón del 10-15% para tareas imprevistas.',
+          'Mantenga las planificaciones de sprint cortas – máximo 2 horas por sprint.',
+          'Utilice las retrospectivas de sprint para mejorar continuamente.',
+          'Evite los sprints durante días festivos o períodos de vacaciones.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'Experto en proyectos SAP' },
+        readingTime: '8 min',
+      },
+      'sap-activate-template-nutzen': {
+        title: 'Crear plantilla de SAP Activate automáticamente',
+        description: 'Aprenda a crear un proyecto SAP Activate completo con todas las fases y actividades con un solo clic.',
+        content: `## ¿Qué es SAP Activate?
+
+SAP Activate es la metodología oficial de proyectos de SAP para implementaciones de S/4HANA. CUTO ofrece plantillas predefinidas que contienen todas las fases y mejores prácticas.
+
+## Fases incluidas
+
+1. **Discover** - Inicialización y alcance del proyecto
+2. **Prepare** - Configuración del proyecto y formación del equipo
+3. **Explore** - Análisis Fit-Gap y diseño
+4. **Realize** - Configuración y desarrollo
+5. **Deploy** - Pruebas y Go-Live
+6. **Run** - Hypercare y optimización`,
+        steps: [
+          { title: 'Crear nuevo proyecto', description: 'Haga clic en "Nuevo proyecto" y seleccione "Crear desde plantilla".' },
+          { title: 'Seleccionar SAP Activate', description: 'Seleccione "SAP Activate for S/4HANA" de las plantillas disponibles.' },
+          { title: 'Introducir datos del proyecto', description: 'Introduzca el nombre del proyecto, la fecha de inicio y el Go-Live planificado. CUTO calcula automáticamente la duración de las fases.' },
+          { title: 'Personalizar plantilla', description: 'Adapte la plantilla a sus necesidades: elimine actividades que no necesite o añada las suyas.' },
+        ],
+        proTips: [
+          'Guarde las plantillas personalizadas para proyectos futuros.',
+          'Utilice los valores estimados como punto de partida y ajústelos según su experiencia.',
+          'Vincule la plantilla con sus roles estándar para una planificación de recursos más rápida.',
+        ],
+        author: { name: 'Sarah Weber', role: 'Consultora SAP' },
+        readingTime: '5 min',
+      },
+      'management-dashboard-erstellen': {
+        title: 'Crear panel de KPIs para la dirección',
+        description: 'Cree paneles significativos que ofrezcan a la dirección una visión general rápida del estado del proyecto.',
+        content: `## ¿Por qué paneles para la dirección?
+
+La dirección necesita una visión diferente del proyecto que el equipo de proyecto. Un buen panel de dirección muestra:
+
+- **Estado del proyecto de un vistazo** (sistema de semáforos)
+- **Presupuesto vs. costes reales**
+- **Resumen de hitos**
+- **Principales riesgos**
+- **Utilización de recursos**
+
+## Mejores prácticas
+
+- Menos es más: Máximo 6-8 KPIs por panel
+- Use los colores de forma consistente (Rojo/Amarillo/Verde)
+- Muestre tendencias, no solo valores actuales
+- Actualice los paneles regularmente`,
+        steps: [
+          { title: 'Abrir área de paneles', description: 'Navegue a "Paneles" y haga clic en "Crear nuevo panel".' },
+          { title: 'Elegir diseño', description: 'Seleccione un diseño predefinido o cree su propia cuadrícula.' },
+          { title: 'Añadir widgets', description: 'Arrastre los widgets deseados al panel: estado del proyecto, gráfico de presupuesto, hitos, etc.' },
+          { title: 'Configurar filtros', description: 'Configure filtros globales por período, proyectos o equipos.' },
+          { title: 'Compartir', description: 'Comparta el panel con el equipo de dirección o expórtelo como PDF.' },
+        ],
+        proTips: [
+          'Cree paneles separados para diferentes grupos de stakeholders.',
+          'Utilice la actualización automática para presentaciones en vivo.',
+          'Exporte los paneles como PDF para reuniones sin conexión.',
+        ],
+        author: { name: 'Thomas Müller', role: 'Líder de PMO' },
+        readingTime: '7 min',
+      },
+      'go-live-checkliste': {
+        title: 'Crear y gestionar la lista de verificación de Go-Live',
+        description: 'Una lista de verificación de Go-Live estructurada es crucial para un cutover exitoso. Aprenda a crearla en CUTO.',
+        content: `## La importancia de una lista de Go-Live
+
+El Go-Live es el momento más crítico de un proyecto SAP. Una lista bien estructurada ayuda a:
+
+- No olvidar nada
+- Definir claramente las responsabilidades
+- Seguir el progreso en tiempo real
+- Reaccionar rápidamente a los problemas
+
+## Áreas típicas de la lista
+
+1. **Pre-Go-Live** (T-7 a T-1)
+2. **Fin de semana del Cutover** (T-0)
+3. **Post-Go-Live / Hypercare** (T+1 a T+14)`,
+        steps: [
+          { title: 'Abrir módulo de Cutover', description: 'Navegue al área de Cutover de su proyecto.' },
+          { title: 'Crear lista desde plantilla', description: 'Seleccione una lista de Go-Live predefinida o cree una nueva.' },
+          { title: 'Añadir tareas', description: 'Añada todas las tareas necesarias con plazos y responsables.' },
+          { title: 'Definir dependencias', description: 'Vincule tareas que dependen unas de otras (p. ej., "Apagar sistema" antes de "Iniciar migración de datos").' },
+          { title: 'Generar runbook', description: 'Exporte la lista como un runbook detallado para el equipo de cutover.' },
+        ],
+        proTips: [
+          'Realice un simulacro de cutover antes del Go-Live real.',
+          'Defina criterios y procedimientos de rollback claros.',
+          'Planifique un colchón suficiente para problemas imprevistos.',
+          'Asegúrese de que todos los stakeholders conocen las vías de escalación.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'Experto en proyectos SAP' },
+        readingTime: '6 min',
+      },
+      'risiken-identifizieren-tracken': {
+        title: 'Identificar y seguir los riesgos del proyecto',
+        description: 'Una gestión proactiva de riesgos es clave para el éxito del proyecto. Aprenda a registrar y monitorear riesgos en CUTO.',
+        content: `## ¿Por qué la gestión de riesgos?
+
+Los proyectos SAP son complejos y tienen muchas fuentes potenciales de riesgo:
+
+- Riesgos técnicos (integración, rendimiento)
+- Riesgos organizativos (gestión del cambio, recursos)
+- Riesgos de cronograma (retrasos, dependencias)
+- Riesgos presupuestarios (scope creep, costes imprevistos)
+
+## Matriz de riesgos
+
+CUTO utiliza una matriz de riesgos estandarizada:
+- **Probabilidad**: Baja / Media / Alta
+- **Impacto**: Bajo / Medio / Alto / Crítico
+- **Puntuación de riesgo**: Calculada automáticamente`,
+        steps: [
+          { title: 'Abrir registro de riesgos', description: 'Navegue a "Riesgos y problemas" en su proyecto.' },
+          { title: 'Registrar nuevo riesgo', description: 'Haga clic en "Añadir riesgo" y describa el riesgo detalladamente.' },
+          { title: 'Realizar evaluación', description: 'Evalúe la probabilidad y el impacto. CUTO calcula la puntuación de riesgo.' },
+          { title: 'Definir medidas', description: 'Añada medidas preventivas y reactivas y asigne responsables.' },
+          { title: 'Revisar regularmente', description: 'Utilice la función de revisión de riesgos para actualizarlos periódicamente.' },
+        ],
+        proTips: [
+          'Realice un taller de riesgos con todos los stakeholders al inicio del proyecto.',
+          'Priorice los 10 principales riesgos y céntrese en ellos.',
+          'Vincule los riesgos con las actividades afectadas para una mejor transparencia.',
+          'Utilice el panel de riesgos para las reuniones del comité de dirección.',
+        ],
+        author: { name: 'Sarah Weber', role: 'Consultora SAP' },
+        readingTime: '5 min',
+      },
+      'datenmigration-planen': {
+        title: 'Planificar la migración de datos de forma estructurada',
+        description: 'Una migración de datos exitosa requiere una planificación cuidadosa. Descubra cómo CUTO le apoya en ello.',
+        content: `## Desafíos de la migración de datos
+
+La migración de datos es a menudo la parte subestimada de un proyecto SAP:
+
+- **Calidad de los datos**: Los datos heredados suelen ser inconsistentes
+- **Mapeo**: Asignar estructuras antiguas a nuevas
+- **Volumen**: Migrar grandes volúmenes de datos de manera eficiente
+- **Validación**: Asegurarse de que todos los datos son correctos
+
+## Módulo de migración de CUTO
+
+CUTO ofrece funciones especializadas para:
+- Planificación y seguimiento de la migración
+- Gestión del catálogo de objetos
+- Documentación de ciclos de prueba
+- Coordinación del Cut-Over`,
+        steps: [
+          { title: 'Registrar objetos de migración', description: 'Cree un catálogo de todos los objetos a migrar (clientes, proveedores, materiales, etc.).' },
+          { title: 'Asignar responsabilidades', description: 'Asigne un responsable funcional y técnico para cada objeto.' },
+          { title: 'Planificar ciclos de prueba', description: 'Planifique varias migraciones de prueba antes de la definitiva.' },
+          { title: 'Seguir el progreso', description: 'Utilice el panel de migración para supervisar el estado de todos los objetos.' },
+          { title: 'Integración del Cutover', description: 'Vincule las actividades de migración con su lista de Go-Live.' },
+        ],
+        proTips: [
+          'Comience pronto con la limpieza de datos, suele llevar más tiempo de lo previsto.',
+          'Documente todas las reglas de mapeo para una trazabilidad posterior.',
+          'Planifique al menos 3 migraciones de prueba completas.',
+          'Involucre a los departamentos funcionales desde el principio en la validación de datos.',
+        ],
+        author: { name: 'Thomas Müller', role: 'Líder de PMO' },
+        readingTime: '9 min',
+      },
     },
   },
 
