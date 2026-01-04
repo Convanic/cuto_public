@@ -427,19 +427,6 @@ export const pt: TranslationKeys = {
     },
   },
   
-  // Cookie Consent
-  cookies: {
-    title: 'Definições de Cookies',
-    description: 'Utilizamos cookies para melhorar a sua experiência.',
-    acceptAll: 'Aceitar Todos',
-    rejectAll: 'Rejeitar Todos',
-    customize: 'Personalizar',
-    necessary: 'Necessários',
-    analytics: 'Analíticos',
-    marketing: 'Marketing',
-    save: 'Guardar Definições',
-  },
-  
   // Language
   language: {
     select: 'Selecionar Idioma',
@@ -1620,6 +1607,24 @@ export const pt: TranslationKeys = {
         start: 'Começar',
         allUseCases: '← Todos os Casos de Uso',
       },
+    },
+    categories: {
+      'project-planning': { name: '', description: '' },
+      'templates': { name: '', description: '' },
+      'dashboards': { name: '', description: '' },
+      'migration': { name: '', description: '' },
+      'cutover': { name: '', description: '' },
+      'risk-management': { name: '', description: '' },
+      'team-management': { name: '', description: '' },
+      'reporting': { name: '', description: '' },
+    },
+    items: {
+      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
     },
   },
 

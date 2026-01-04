@@ -427,19 +427,6 @@ export const hi: TranslationKeys = {
     },
   },
   
-  // Cookie Consent
-  cookies: {
-    title: 'कुकी सेटिंग्स',
-    description: 'हम आपके अनुभव को बेहतर बनाने के लिए कुकीज़ का उपयोग करते हैं।',
-    acceptAll: 'सभी को स्वीकार करें',
-    rejectAll: 'सभी को अस्वीकार करें',
-    customize: 'अनुकूलित करें',
-    necessary: 'आवश्यक',
-    analytics: 'विश्लेषिकी',
-    marketing: 'विपणन',
-    save: 'सेटिंग्स सहेजें',
-  },
-  
   // Language
   language: {
     select: 'भाषा चुनें',
@@ -1620,6 +1607,24 @@ export const hi: TranslationKeys = {
         start: 'Get started',
         allUseCases: '← All Use Cases',
       },
+    },
+    categories: {
+      'project-planning': { name: '', description: '' },
+      'templates': { name: '', description: '' },
+      'dashboards': { name: '', description: '' },
+      'migration': { name: '', description: '' },
+      'cutover': { name: '', description: '' },
+      'risk-management': { name: '', description: '' },
+      'team-management': { name: '', description: '' },
+      'reporting': { name: '', description: '' },
+    },
+    items: {
+      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
     },
   },
 

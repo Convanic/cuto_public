@@ -427,19 +427,6 @@ export const en: TranslationKeys = {
     },
   },
   
-  // Cookie Consent
-  cookies: {
-    title: 'Cookie Settings',
-    description: 'We use cookies to improve your experience.',
-    acceptAll: 'Accept All',
-    rejectAll: 'Reject All',
-    customize: 'Customize',
-    necessary: 'Necessary',
-    analytics: 'Analytics',
-    marketing: 'Marketing',
-    save: 'Save Settings',
-  },
-  
   // Language
   language: {
     select: 'Select Language',
@@ -1619,6 +1606,245 @@ export const en: TranslationKeys = {
         description: 'Start today and optimize your SAP projects.',
         start: 'Get started',
         allUseCases: '← All Use Cases',
+      },
+    },
+    // Categories
+    categories: {
+      'project-planning': {
+        name: 'Project Planning',
+        description: 'Plan phases, sprints, and milestones',
+      },
+      'templates': {
+        name: 'Templates',
+        description: 'Create and use templates',
+      },
+      'dashboards': {
+        name: 'Dashboards',
+        description: 'Visualize KPIs and reports',
+      },
+      'migration': {
+        name: 'Data Migration',
+        description: 'Migrate data in a structured way',
+      },
+      'cutover': {
+        name: 'Cutover',
+        description: 'Execute Go-Live successfully',
+      },
+      'risk-management': {
+        name: 'Risk Management',
+        description: 'Identify and manage risks',
+      },
+      'team-management': {
+        name: 'Team & Resources',
+        description: 'Manage teams and roles',
+      },
+      'reporting': {
+        name: 'Reporting',
+        description: 'Create reports and exports',
+      },
+    },
+    // Use Case Items
+    items: {
+      'phase-in-sprints-aufteilen': {
+        title: 'How to divide a phase into sprints?',
+        description: 'Learn how to effectively divide an SAP project phase into manageable sprints – for better overview and agile working.',
+        content: `## Overview
+
+In complex SAP projects, a single phase can quickly become overwhelming. Dividing it into sprints helps to better track progress and keep the team focused.
+
+## Why Sprints in SAP Projects?
+
+- **Better Overview**: Smaller work packages are easier to manage
+- **Regular Feedback**: Results can be reviewed after each sprint
+- **Flexibility**: Adjustments can be made faster
+- **Motivation**: Visible progress in short time periods
+
+## Prerequisites
+
+Before you begin, make sure that:
+- The phase is already created in CUTO
+- The activities of the phase are defined
+- The team is assigned to the phase`,
+        steps: [
+          { title: 'Select Phase', description: 'Navigate to the desired phase in your project. Click on the phase menu and select "Sprint Planning".' },
+          { title: 'Set Sprint Duration', description: 'Define the standard sprint length (typical: 2-4 weeks). CUTO automatically calculates the number of possible sprints based on the phase duration.' },
+          { title: 'Assign Activities', description: 'Drag and drop activities into the respective sprints. CUTO shows you the workload per sprint.' },
+          { title: 'Check Dependencies', description: 'CUTO automatically warns you if activities with dependencies are planned in the wrong order.' },
+          { title: 'Define Sprint Goals', description: 'Add a clear goal for each sprint. This helps the team stay focused.' },
+        ],
+        proTips: [
+          'Plan a buffer of 10-15% for unforeseen tasks.',
+          'Keep sprint plannings short – maximum 2 hours per sprint.',
+          'Use sprint retrospectives to continuously improve.',
+          'Avoid sprints during holidays or vacation periods.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'SAP Project Expert' },
+        readingTime: '8 min',
+      },
+      'sap-activate-template-nutzen': {
+        title: 'Create SAP Activate Template automatically',
+        description: 'Learn how to create a complete SAP Activate project with all phases and activities with one click.',
+        content: `## What is SAP Activate?
+
+SAP Activate is SAP's official project methodology for S/4HANA implementations. CUTO offers pre-built templates that contain all phases and best practices.
+
+## Included Phases
+
+1. **Discover** - Project initialization and scoping
+2. **Prepare** - Project setup and team building
+3. **Explore** - Fit-Gap analysis and design
+4. **Realize** - Configuration and development
+5. **Deploy** - Testing and Go-Live
+6. **Run** - Hypercare and optimization`,
+        steps: [
+          { title: 'Create New Project', description: 'Click on "New Project" and select "Create from Template".' },
+          { title: 'Select SAP Activate', description: 'Choose "SAP Activate for S/4HANA" from the available templates.' },
+          { title: 'Enter Project Data', description: 'Enter project name, start date, and planned Go-Live. CUTO automatically calculates the phase durations.' },
+          { title: 'Customize Template', description: 'Adapt the template to your needs – remove unnecessary activities or add your own.' },
+        ],
+        proTips: [
+          'Save customized templates for future projects.',
+          'Use the estimates as a starting point and adjust them based on your experience.',
+          'Link the template with your standard roles for faster resource planning.',
+        ],
+        author: { name: 'Sarah Weber', role: 'SAP Consultant' },
+        readingTime: '5 min',
+      },
+      'management-dashboard-erstellen': {
+        title: 'Create KPI Dashboard for Management',
+        description: 'Create meaningful dashboards that give management a quick overview of project status.',
+        content: `## Why Management Dashboards?
+
+Management needs a different view of the project than the project team. A good management dashboard shows:
+
+- **Project status at a glance** (traffic light system)
+- **Budget vs. actual costs**
+- **Milestone overview**
+- **Top risks**
+- **Resource utilization**
+
+## Best Practices
+
+- Less is more: Maximum 6-8 KPIs per dashboard
+- Use colors consistently (Red/Yellow/Green)
+- Show trends, not just current values
+- Update dashboards regularly`,
+        steps: [
+          { title: 'Open Dashboard Area', description: 'Navigate to "Dashboards" and click on "Create New Dashboard".' },
+          { title: 'Choose Layout', description: 'Select a predefined layout or create your own grid.' },
+          { title: 'Add Widgets', description: 'Drag the desired widgets onto the dashboard: project status, budget chart, milestones, etc.' },
+          { title: 'Configure Filters', description: 'Configure global filters for time period, projects, or teams.' },
+          { title: 'Share', description: 'Share the dashboard with the management team or export it as PDF.' },
+        ],
+        proTips: [
+          'Create separate dashboards for different stakeholder groups.',
+          'Use automatic refresh for live presentations.',
+          'Export dashboards as PDF for offline meetings.',
+        ],
+        author: { name: 'Thomas Müller', role: 'PMO Lead' },
+        readingTime: '7 min',
+      },
+      'go-live-checkliste': {
+        title: 'Create and Manage Go-Live Checklist',
+        description: 'A structured Go-Live checklist is crucial for a successful cutover. Learn how to create one in CUTO.',
+        content: `## The Importance of a Go-Live Checklist
+
+The Go-Live is the most critical moment of an SAP project. A well-structured checklist helps:
+
+- Not forgetting anything
+- Clearly defining responsibilities
+- Tracking progress in real-time
+- Responding quickly to problems
+
+## Typical Checklist Areas
+
+1. **Pre-Go-Live** (T-7 to T-1)
+2. **Cutover Weekend** (T-0)
+3. **Post-Go-Live / Hypercare** (T+1 to T+14)`,
+        steps: [
+          { title: 'Open Cutover Module', description: 'Navigate to the Cutover area of your project.' },
+          { title: 'Create Checklist from Template', description: 'Select a predefined Go-Live checklist or create a new one.' },
+          { title: 'Add Tasks', description: 'Add all necessary tasks with time windows and responsible persons.' },
+          { title: 'Define Dependencies', description: 'Link tasks that depend on each other (e.g., "Shut down system" before "Start data migration").' },
+          { title: 'Generate Runbook', description: 'Export the checklist as a detailed runbook for the cutover team.' },
+        ],
+        proTips: [
+          'Conduct a cutover drill (dry run) before the actual Go-Live takes place.',
+          'Define clear rollback criteria and procedures.',
+          'Plan sufficient buffer for unforeseen problems.',
+          'Ensure all stakeholders know the escalation paths.',
+        ],
+        author: { name: 'Dr. Michael Schmidt', role: 'SAP Project Expert' },
+        readingTime: '6 min',
+      },
+      'risiken-identifizieren-tracken': {
+        title: 'Identify and Track Project Risks',
+        description: 'Proactive risk management is key to project success. Learn how to capture and monitor risks in CUTO.',
+        content: `## Why Risk Management?
+
+SAP projects are complex and have many potential risk sources:
+
+- Technical risks (integration, performance)
+- Organizational risks (change management, resources)
+- Timeline risks (delays, dependencies)
+- Budget risks (scope creep, unforeseen costs)
+
+## Risk Matrix
+
+CUTO uses a standardized risk matrix:
+- **Probability**: Low / Medium / High
+- **Impact**: Low / Medium / High / Critical
+- **Risk Score**: Automatically calculated`,
+        steps: [
+          { title: 'Open Risk Register', description: 'Navigate to "Risks & Issues" in your project.' },
+          { title: 'Capture New Risk', description: 'Click on "Add Risk" and describe the risk in detail.' },
+          { title: 'Assess Risk', description: 'Evaluate probability and impact. CUTO calculates the risk score.' },
+          { title: 'Define Measures', description: 'Add preventive and reactive measures and assign responsible persons.' },
+          { title: 'Review Regularly', description: 'Use the Risk Review function to update risks regularly.' },
+        ],
+        proTips: [
+          'Conduct a risk workshop with all stakeholders at the beginning of the project.',
+          'Prioritize the top 10 risks and focus on them.',
+          'Link risks with affected activities for better transparency.',
+          'Use the risk dashboard for steering committee meetings.',
+        ],
+        author: { name: 'Sarah Weber', role: 'SAP Consultant' },
+        readingTime: '5 min',
+      },
+      'datenmigration-planen': {
+        title: 'Plan Data Migration Systematically',
+        description: 'A successful data migration requires careful planning. Learn how CUTO supports you.',
+        content: `## Challenges of Data Migration
+
+Data migration is often the underestimated part of an SAP project:
+
+- **Data Quality**: Legacy data is often inconsistent
+- **Mapping**: Map old to new structures
+- **Volume**: Migrate large amounts of data efficiently
+- **Validation**: Ensure all data is correct
+
+## CUTO Migration Module
+
+CUTO offers specialized functions for:
+- Migration planning and tracking
+- Object catalog management
+- Test run documentation
+- Cutover coordination`,
+        steps: [
+          { title: 'Capture Migration Objects', description: 'Create a catalog of all objects to be migrated (customers, vendors, materials, etc.).' },
+          { title: 'Assign Responsibilities', description: 'Assign a business and technical owner for each object.' },
+          { title: 'Plan Test Runs', description: 'Plan multiple test migrations before the final run.' },
+          { title: 'Track Progress', description: 'Use the Migration Dashboard to monitor the status of all objects.' },
+          { title: 'Cutover Integration', description: 'Link migration activities with your Go-Live checklist.' },
+        ],
+        proTips: [
+          'Start early with data cleansing – it usually takes longer than planned.',
+          'Document all mapping rules for later traceability.',
+          'Plan at least 3 complete test migrations.',
+          'Involve business departments early in data validation.',
+        ],
+        author: { name: 'Thomas Müller', role: 'PMO Lead' },
+        readingTime: '9 min',
       },
     },
   },

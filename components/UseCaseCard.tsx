@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { UseCase, getCategoryInfo } from '@/lib/use-cases';
+import { useI18n } from '@/lib/i18n/context';
 
 interface UseCaseCardProps {
   useCase: UseCase;
@@ -10,7 +11,8 @@ interface UseCaseCardProps {
 }
 
 export default function UseCaseCard({ useCase, index = 0 }: UseCaseCardProps) {
-  const category = getCategoryInfo(useCase.category);
+  const { t, locale } = useI18n();
+  const category = getCategoryInfo(useCase.category, locale);
 
   return (
     <motion.div
@@ -99,7 +101,7 @@ export default function UseCaseCard({ useCase, index = 0 }: UseCaseCardProps) {
                 <span>{useCase.readingTime || '5 min'}</span>
               </div>
               <span className="text-[#952494] font-medium group-hover:underline">
-                Lesen →
+                {t.common.readMore} →
               </span>
             </div>
           </div>
@@ -111,7 +113,8 @@ export default function UseCaseCard({ useCase, index = 0 }: UseCaseCardProps) {
 
 // Compact variant for related use cases
 export function UseCaseCardCompact({ useCase }: { useCase: UseCase }) {
-  const category = getCategoryInfo(useCase.category);
+  const { locale } = useI18n();
+  const category = getCategoryInfo(useCase.category, locale);
 
   return (
     <Link href={`/use-cases/${useCase.slug}`} className="block group">

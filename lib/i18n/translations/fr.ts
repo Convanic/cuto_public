@@ -427,19 +427,6 @@ export const fr: TranslationKeys = {
     },
   },
   
-  // Cookie Consent
-  cookies: {
-    title: 'Paramètres des cookies',
-    description: 'Nous utilisons des cookies pour améliorer votre expérience.',
-    acceptAll: 'Tout accepter',
-    rejectAll: 'Tout refuser',
-    customize: 'Personnaliser',
-    necessary: 'Nécessaires',
-    analytics: 'Analytiques',
-    marketing: 'Marketing',
-    save: 'Enregistrer les paramètres',
-  },
-  
   // Language
   language: {
     select: 'Choisir la langue',
@@ -1507,6 +1494,24 @@ export const fr: TranslationKeys = {
         start: 'Commencer',
         allUseCases: '← Tous les cas d\'usage',
       },
+    },
+    categories: {
+      'project-planning': { name: '', description: '' },
+      'templates': { name: '', description: '' },
+      'dashboards': { name: '', description: '' },
+      'migration': { name: '', description: '' },
+      'cutover': { name: '', description: '' },
+      'risk-management': { name: '', description: '' },
+      'team-management': { name: '', description: '' },
+      'reporting': { name: '', description: '' },
+    },
+    items: {
+      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
     },
   },
 

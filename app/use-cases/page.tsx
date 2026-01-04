@@ -5,15 +5,18 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import UseCaseCard from '@/components/UseCaseCard';
 import AnimatedSection from '@/components/AnimatedSection';
-import { useCases, categories, UseCaseCategory, getFeaturedUseCases } from '@/lib/use-cases';
+import { getUseCases, getCategories, UseCaseCategory, getFeaturedUseCases } from '@/lib/use-cases';
 import { useI18n } from '@/lib/i18n/context';
 
 export default function UseCasesPage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [selectedCategory, setSelectedCategory] = useState<UseCaseCategory | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const featuredUseCases = getFeaturedUseCases();
+  // Get translated data based on current locale
+  const useCases = getUseCases(locale);
+  const categories = getCategories(locale);
+  const featuredUseCases = getFeaturedUseCases(locale);
 
   const filteredUseCases = useCases.filter((useCase) => {
     const matchesCategory = selectedCategory === 'all' || useCase.category === selectedCategory;

@@ -1,11 +1,9 @@
 import { notFound } from 'next/navigation';
-import Link from 'next/link';
 import { Metadata } from 'next';
 import { 
   useCases, 
   getUseCaseBySlug, 
-  getCategoryInfo, 
-  getRelatedUseCases 
+  getCategoryInfo 
 } from '@/lib/use-cases';
 import UseCaseContent from './UseCaseContent';
 
@@ -16,14 +14,14 @@ export async function generateStaticParams() {
   }));
 }
 
-// Generate metadata for each use case
+// Generate metadata for each use case (using default locale for SEO)
 export async function generateMetadata({ 
   params 
 }: { 
   params: Promise<{ slug: string }> 
 }): Promise<Metadata> {
   const { slug } = await params;
-  const useCase = getUseCaseBySlug(slug);
+  const useCase = getUseCaseBySlug(slug, 'de'); // Default to German for metadata
   
   if (!useCase) {
     return {
@@ -31,7 +29,7 @@ export async function generateMetadata({
     };
   }
 
-  const category = getCategoryInfo(useCase.category);
+  const category = getCategoryInfo(useCase.category, 'de');
 
   return {
     title: `${useCase.title} | CUTO Use Cases`,
@@ -61,20 +59,13 @@ export default async function UseCasePage({
   params: Promise<{ slug: string }> 
 }) {
   const { slug } = await params;
-  const useCase = getUseCaseBySlug(slug);
-
+  
+  // Check if use case exists (using any locale)
+  const useCase = getUseCaseBySlug(slug, 'de');
   if (!useCase) {
     notFound();
   }
 
-  const category = getCategoryInfo(useCase.category);
-  const relatedUseCases = getRelatedUseCases(useCase);
-
-  return (
-    <UseCaseContent 
-      useCase={useCase} 
-      category={category} 
-      relatedUseCases={relatedUseCases} 
-    />
-  );
+  // Pass slug to client component which will handle locale
+  return <UseCaseContent slug={slug} />;
 }

@@ -1,9 +1,9 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { UseCase, CategoryInfo } from '@/lib/use-cases';
+import { UseCase, CategoryInfo, getUseCaseBySlug, getCategoryInfo, getRelatedUseCases } from '@/lib/use-cases';
 import { UseCaseCardCompact } from '@/components/UseCaseCard';
 import AnimatedSection from '@/components/AnimatedSection';
 import { useI18n } from '@/lib/i18n/context';
@@ -119,18 +119,29 @@ function MarkdownContent({ content }: { content: string }) {
 }
 
 interface UseCaseContentProps {
-  useCase: UseCase;
-  category: CategoryInfo | undefined;
-  relatedUseCases: UseCase[];
+  slug: string;
 }
 
 export default function UseCaseContent({ 
-  useCase, 
-  category, 
-  relatedUseCases 
+  slug 
 }: UseCaseContentProps) {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  
+  // Get translated use case data
+  const useCase = getUseCaseBySlug(slug, locale);
+  const category = useCase ? getCategoryInfo(useCase.category, locale) : undefined;
+  const relatedUseCases = useCase ? getRelatedUseCases(useCase, locale) : [];
+
+  if (!useCase) {
+    return (
+      <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-3xl font-bold text-white">Use Case not found</h1>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">

@@ -427,19 +427,6 @@ export const zh: TranslationKeys = {
     },
   },
   
-  // Cookie Consent
-  cookies: {
-    title: 'Cookie设置',
-    description: '我们使用Cookie来改善您的体验。',
-    acceptAll: '全部接受',
-    rejectAll: '全部拒绝',
-    customize: '自定义',
-    necessary: '必需的',
-    analytics: '分析',
-    marketing: '营销',
-    save: '保存设置',
-  },
-  
   // Language
   language: {
     select: '选择语言',
@@ -1622,6 +1609,24 @@ export const zh: TranslationKeys = {
         start: '开始使用',
         allUseCases: '← 所有用例',
       },
+    },
+    categories: {
+      'project-planning': { name: '', description: '' },
+      'templates': { name: '', description: '' },
+      'dashboards': { name: '', description: '' },
+      'migration': { name: '', description: '' },
+      'cutover': { name: '', description: '' },
+      'risk-management': { name: '', description: '' },
+      'team-management': { name: '', description: '' },
+      'reporting': { name: '', description: '' },
+    },
+    items: {
+      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
     },
   },
 

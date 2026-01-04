@@ -427,19 +427,6 @@ export const cs: TranslationKeys = {
     },
   },
   
-  // Cookie Consent
-  cookies: {
-    title: 'Nastavení souborů cookie',
-    description: 'Používáme soubory cookie ke zlepšení vašeho zážitku.',
-    acceptAll: 'Přijmout vše',
-    rejectAll: 'Odmítnout vše',
-    customize: 'Přizpůsobit',
-    necessary: 'Nezbytné',
-    analytics: 'Analytické',
-    marketing: 'Marketingové',
-    save: 'Uložit nastavení',
-  },
-  
   // Language
   language: {
     select: 'Vybrat jazyk',
@@ -1620,6 +1607,26 @@ export const cs: TranslationKeys = {
         start: 'Začít',
         allUseCases: '← Všechny případy užití',
       },
+    },
+    // Categories - will fallback to German
+    categories: {
+      'project-planning': { name: '', description: '' },
+      'templates': { name: '', description: '' },
+      'dashboards': { name: '', description: '' },
+      'migration': { name: '', description: '' },
+      'cutover': { name: '', description: '' },
+      'risk-management': { name: '', description: '' },
+      'team-management': { name: '', description: '' },
+      'reporting': { name: '', description: '' },
+    },
+    // Items - will fallback to German
+    items: {
+      'phase-in-sprints-aufteilen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'sap-activate-template-nutzen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'management-dashboard-erstellen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'go-live-checkliste': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'risiken-identifizieren-tracken': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
+      'datenmigration-planen': { title: '', description: '', content: '', steps: [], proTips: [], author: { name: '', role: '' }, readingTime: '' },
     },
   },
 
