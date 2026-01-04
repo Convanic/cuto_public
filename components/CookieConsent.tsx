@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useI18n } from '@/lib/i18n/context';
 
 type CookiePreferences = {
   necessary: boolean;
@@ -19,6 +20,7 @@ const defaultPreferences: CookiePreferences = {
 };
 
 export default function CookieConsent() {
+  const { t } = useI18n();
   const [isVisible, setIsVisible] = useState(false);
   const [showDetails, setShowDetails] = useState(false);
   const [preferences, setPreferences] = useState<CookiePreferences>(defaultPreferences);
@@ -110,13 +112,12 @@ export default function CookieConsent() {
                     </div>
                     <div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                        🍪 We value your privacy
+                        {t.cookies.title}
                       </h3>
                       <p className="text-gray-600 text-sm leading-relaxed">
-                        We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. 
-                        By clicking &quot;Accept All&quot;, you consent to our use of cookies. You can also customize your preferences.{' '}
+                        {t.cookies.description}{' '}
                         <Link href="/cookie-policy" className="text-[#952494] hover:text-[#FA9B0C] underline transition-colors">
-                          Learn more
+                          {t.cookies.learnMore}
                         </Link>
                       </p>
                     </div>
@@ -129,19 +130,19 @@ export default function CookieConsent() {
                     onClick={() => setShowDetails(!showDetails)}
                     className="px-5 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-lg transition-colors"
                   >
-                    {showDetails ? 'Hide Details' : 'Customize'}
+                    {showDetails ? t.cookies.hideDetails : t.cookies.customize}
                   </button>
                   <button
                     onClick={rejectAll}
                     className="px-5 py-2.5 text-sm font-medium text-gray-700 border border-gray-300 hover:bg-gray-50 rounded-lg transition-colors"
                   >
-                    Reject All
+                    {t.cookies.rejectAll}
                   </button>
                   <button
                     onClick={acceptAll}
                     className="px-5 py-2.5 text-sm font-medium text-white bg-gradient-to-r from-[#952494] to-[#FA9B0C] hover:opacity-90 rounded-lg transition-opacity shadow-lg"
                   >
-                    Accept All
+                    {t.cookies.acceptAll}
                   </button>
                 </div>
               </div>
@@ -158,7 +159,7 @@ export default function CookieConsent() {
                   className="border-t border-gray-200 overflow-hidden"
                 >
                   <div className="p-6 bg-gray-50">
-                    <h4 className="font-semibold text-gray-900 mb-4">Cookie Preferences</h4>
+                    <h4 className="font-semibold text-gray-900 mb-4">{t.cookies.preferencesTitle}</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       {/* Necessary Cookies */}
                       <div className="flex items-start gap-3 p-4 bg-white rounded-lg border border-gray-200">
@@ -171,11 +172,11 @@ export default function CookieConsent() {
                         </div>
                         <div className="flex-1">
                           <div className="flex items-center justify-between">
-                            <span className="font-medium text-gray-900">Necessary</span>
-                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">Always Active</span>
+                            <span className="font-medium text-gray-900">{t.cookies.necessary.title}</span>
+                            <span className="text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded">{t.cookies.necessary.badge}</span>
                           </div>
                           <p className="text-sm text-gray-600 mt-1">
-                            Essential for the website to function. Cannot be disabled.
+                            {t.cookies.necessary.description}
                           </p>
                         </div>
                       </div>
@@ -197,9 +198,9 @@ export default function CookieConsent() {
                           )}
                         </button>
                         <div className="flex-1">
-                          <span className="font-medium text-gray-900">Analytics</span>
+                          <span className="font-medium text-gray-900">{t.cookies.analytics.title}</span>
                           <p className="text-sm text-gray-600 mt-1">
-                            Help us understand how visitors interact with our website.
+                            {t.cookies.analytics.description}
                           </p>
                         </div>
                       </div>
@@ -221,9 +222,9 @@ export default function CookieConsent() {
                           )}
                         </button>
                         <div className="flex-1">
-                          <span className="font-medium text-gray-900">Functional</span>
+                          <span className="font-medium text-gray-900">{t.cookies.functional.title}</span>
                           <p className="text-sm text-gray-600 mt-1">
-                            Remember your preferences and personalize your experience.
+                            {t.cookies.functional.description}
                           </p>
                         </div>
                       </div>
@@ -245,9 +246,9 @@ export default function CookieConsent() {
                           )}
                         </button>
                         <div className="flex-1">
-                          <span className="font-medium text-gray-900">Marketing</span>
+                          <span className="font-medium text-gray-900">{t.cookies.marketing.title}</span>
                           <p className="text-sm text-gray-600 mt-1">
-                            Show you relevant ads and measure ad campaign effectiveness.
+                            {t.cookies.marketing.description}
                           </p>
                         </div>
                       </div>
@@ -259,7 +260,7 @@ export default function CookieConsent() {
                         onClick={acceptSelected}
                         className="px-6 py-2.5 text-sm font-medium text-white bg-gray-900 hover:bg-gray-800 rounded-lg transition-colors"
                       >
-                        Save Preferences
+                        {t.cookies.savePreferences}
                       </button>
                     </div>
                   </div>
@@ -272,4 +273,3 @@ export default function CookieConsent() {
     </AnimatePresence>
   );
 }
-

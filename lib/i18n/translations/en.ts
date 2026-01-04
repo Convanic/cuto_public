@@ -58,6 +58,36 @@ export const en: TranslationKeys = {
     company: 'Company',
     message: 'Message',
   },
+
+  // Cookie Consent Banner
+  cookies: {
+    title: '🍪 We value your privacy',
+    description: 'We use cookies to enhance your browsing experience, analyze site traffic, and personalize content. By clicking "Accept All", you consent to our use of cookies. You can also customize your preferences.',
+    learnMore: 'Learn more',
+    customize: 'Customize',
+    hideDetails: 'Hide Details',
+    rejectAll: 'Reject All',
+    acceptAll: 'Accept All',
+    savePreferences: 'Save Preferences',
+    preferencesTitle: 'Cookie Preferences',
+    necessary: {
+      title: 'Necessary',
+      description: 'Essential for the website to function. Cannot be disabled.',
+      badge: 'Always Active',
+    },
+    analytics: {
+      title: 'Analytics',
+      description: 'Help us understand how visitors interact with our website.',
+    },
+    functional: {
+      title: 'Functional',
+      description: 'Remember your preferences and personalize your experience.',
+    },
+    marketing: {
+      title: 'Marketing',
+      description: 'Show you relevant ads and measure ad campaign effectiveness.',
+    },
+  },
   
   // Homepage
   home: {

@@ -58,6 +58,36 @@ export const fr: TranslationKeys = {
     company: 'Entreprise',
     message: 'Message',
   },
+
+  // Cookie Consent Banner
+  cookies: {
+    title: '🍪 Nous respectons votre vie privée',
+    description: 'Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et personnaliser le contenu. En cliquant sur "Tout accepter", vous consentez à notre utilisation des cookies. Vous pouvez également personnaliser vos préférences.',
+    learnMore: 'En savoir plus',
+    customize: 'Personnaliser',
+    hideDetails: 'Masquer les détails',
+    rejectAll: 'Tout refuser',
+    acceptAll: 'Tout accepter',
+    savePreferences: 'Enregistrer les préférences',
+    preferencesTitle: 'Préférences de cookies',
+    necessary: {
+      title: 'Nécessaires',
+      description: 'Essentiels au fonctionnement du site web. Ne peuvent pas être désactivés.',
+      badge: 'Toujours actif',
+    },
+    analytics: {
+      title: 'Analytiques',
+      description: 'Nous aident à comprendre comment les visiteurs interagissent avec notre site web.',
+    },
+    functional: {
+      title: 'Fonctionnels',
+      description: 'Mémorisent vos préférences et personnalisent votre expérience.',
+    },
+    marketing: {
+      title: 'Marketing',
+      description: 'Affichent des publicités pertinentes et mesurent l\'efficacité des campagnes.',
+    },
+  },
   
   // Homepage
   home: {

@@ -58,6 +58,36 @@ export const zh: TranslationKeys = {
     company: '公司',
     message: '消息',
   },
+
+  // Cookie Consent Banner
+  cookies: {
+    title: '🍪 我们重视您的隐私',
+    description: '我们使用 Cookie 来改善您的浏览体验、分析网站流量并个性化内容。点击"全部接受"即表示您同意我们使用 Cookie。您也可以自定义您的偏好设置。',
+    learnMore: '了解更多',
+    customize: '自定义',
+    hideDetails: '隐藏详情',
+    rejectAll: '全部拒绝',
+    acceptAll: '全部接受',
+    savePreferences: '保存偏好设置',
+    preferencesTitle: 'Cookie 偏好设置',
+    necessary: {
+      title: '必要',
+      description: '网站正常运行所必需的。无法禁用。',
+      badge: '始终启用',
+    },
+    analytics: {
+      title: '分析',
+      description: '帮助我们了解访问者如何与我们的网站互动。',
+    },
+    functional: {
+      title: '功能',
+      description: '记住您的偏好并个性化您的体验。',
+    },
+    marketing: {
+      title: '营销',
+      description: '向您展示相关广告并衡量广告活动的效果。',
+    },
+  },
   
   // Homepage
   home: {

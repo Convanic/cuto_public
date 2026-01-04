@@ -58,6 +58,36 @@ export const cs: TranslationKeys = {
     company: 'Společnost',
     message: 'Zpráva',
   },
+
+  // Cookie Consent Banner
+  cookies: {
+    title: '🍪 Vážíme si vašeho soukromí',
+    description: 'Používáme cookies ke zlepšení vašeho zážitku z prohlížení, analýze návštěvnosti webu a personalizaci obsahu. Kliknutím na "Přijmout vše" souhlasíte s používáním cookies. Můžete si také přizpůsobit své preference.',
+    learnMore: 'Zjistit více',
+    customize: 'Přizpůsobit',
+    hideDetails: 'Skrýt detaily',
+    rejectAll: 'Odmítnout vše',
+    acceptAll: 'Přijmout vše',
+    savePreferences: 'Uložit preference',
+    preferencesTitle: 'Předvolby cookies',
+    necessary: {
+      title: 'Nezbytné',
+      description: 'Nezbytné pro fungování webu. Nelze deaktivovat.',
+      badge: 'Vždy aktivní',
+    },
+    analytics: {
+      title: 'Analytické',
+      description: 'Pomáhají nám pochopit, jak návštěvníci interagují s naším webem.',
+    },
+    functional: {
+      title: 'Funkční',
+      description: 'Pamatují si vaše preference a personalizují váš zážitek.',
+    },
+    marketing: {
+      title: 'Marketingové',
+      description: 'Zobrazují relevantní reklamy a měří účinnost reklamních kampaní.',
+    },
+  },
   
   // Homepage
   home: {

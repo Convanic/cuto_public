@@ -58,6 +58,36 @@ export const es: TranslationKeys = {
     company: 'Empresa',
     message: 'Mensaje',
   },
+
+  // Cookie Consent Banner
+  cookies: {
+    title: '🍪 Valoramos su privacidad',
+    description: 'Utilizamos cookies para mejorar su experiencia de navegación, analizar el tráfico del sitio y personalizar el contenido. Al hacer clic en "Aceptar todo", acepta el uso de cookies. También puede personalizar sus preferencias.',
+    learnMore: 'Más información',
+    customize: 'Personalizar',
+    hideDetails: 'Ocultar detalles',
+    rejectAll: 'Rechazar todo',
+    acceptAll: 'Aceptar todo',
+    savePreferences: 'Guardar preferencias',
+    preferencesTitle: 'Preferencias de cookies',
+    necessary: {
+      title: 'Necesarias',
+      description: 'Esenciales para el funcionamiento del sitio web. No se pueden desactivar.',
+      badge: 'Siempre activo',
+    },
+    analytics: {
+      title: 'Analíticas',
+      description: 'Nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web.',
+    },
+    functional: {
+      title: 'Funcionales',
+      description: 'Recuerdan sus preferencias y personalizan su experiencia.',
+    },
+    marketing: {
+      title: 'Marketing',
+      description: 'Muestran anuncios relevantes y miden la efectividad de las campañas publicitarias.',
+    },
+  },
   
   // Homepage
   home: {

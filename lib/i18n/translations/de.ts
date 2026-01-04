@@ -56,6 +56,36 @@ export const de = {
     company: 'Unternehmen',
     message: 'Nachricht',
   },
+
+  // Cookie Consent Banner
+  cookies: {
+    title: '🍪 Wir respektieren Ihre Privatsphäre',
+    description: 'Wir verwenden Cookies, um Ihr Surferlebnis zu verbessern, den Website-Verkehr zu analysieren und Inhalte zu personalisieren. Durch Klicken auf "Alle akzeptieren" stimmen Sie der Verwendung von Cookies zu. Sie können auch Ihre Einstellungen anpassen.',
+    learnMore: 'Mehr erfahren',
+    customize: 'Anpassen',
+    hideDetails: 'Details ausblenden',
+    rejectAll: 'Alle ablehnen',
+    acceptAll: 'Alle akzeptieren',
+    savePreferences: 'Einstellungen speichern',
+    preferencesTitle: 'Cookie-Einstellungen',
+    necessary: {
+      title: 'Notwendig',
+      description: 'Unverzichtbar für die Funktion der Website. Kann nicht deaktiviert werden.',
+      badge: 'Immer aktiv',
+    },
+    analytics: {
+      title: 'Analytik',
+      description: 'Helfen Sie uns zu verstehen, wie Besucher mit unserer Website interagieren.',
+    },
+    functional: {
+      title: 'Funktional',
+      description: 'Speichern Sie Ihre Präferenzen und personalisieren Sie Ihr Erlebnis.',
+    },
+    marketing: {
+      title: 'Marketing',
+      description: 'Zeigen Sie relevante Werbung an und messen Sie die Wirksamkeit von Werbekampagnen.',
+    },
+  },
   
   // Homepage
   home: {
