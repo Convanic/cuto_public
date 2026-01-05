@@ -76,22 +76,30 @@ echo -e "${YELLOW}Schritt 4: Nginx-Konfiguration für cuto.ai erstellen...${NC}"
 cd /var/www/cuto
 cp nginx-cuto-www.conf /etc/nginx/sites-available/cuto-www
 ln -sf /etc/nginx/sites-available/cuto-www /etc/nginx/sites-enabled/
-echo -e "${GREEN}cuto.ai Konfiguration erstellt.${NC}"
+echo -e "${GREEN}www.cuto.ai Konfiguration erstellt.${NC}"
+
+echo ""
+echo -e "${YELLOW}Hinweis: app.cuto.ai wird automatisch in die Apache-Proxy-Liste aufgenommen${NC}"
+echo -e "${YELLOW}(da es eine PHP/MySQL-Anwendung ist, die über Apache läuft).${NC}"
 
 echo ""
 echo -e "${YELLOW}Schritt 5: Apache-Proxy-Konfiguration erstellen...${NC}"
+
+# Füge app.cuto.ai zu den Apache-Domains hinzu (PHP/MySQL-App läuft über Apache)
+APACHE_DOMAINS_WITH_APP="$APACHE_DOMAINS app.cuto.ai www.app.cuto.ai"
 
 # Erstelle Apache-Proxy Konfiguration
 cat > /etc/nginx/sites-available/apache-proxy <<EOF
 # Apache Proxy - Weiterleitung aller Apache-Domains an Apache auf Port 8080/8443
 # Auto-generiert am $(date)
+# Enthält: Alle bestehenden Apache-Domains + app.cuto.ai (PHP/MySQL)
 
 # HTTP (Port 80)
 server {
     listen 80;
     listen [::]:80;
     
-    server_name $APACHE_DOMAINS;
+    server_name $APACHE_DOMAINS_WITH_APP;
     
     location / {
         proxy_pass http://localhost:8080;
@@ -115,7 +123,7 @@ server {
     listen 443 ssl http2;
     listen [::]:443 ssl http2;
     
-    server_name $APACHE_DOMAINS;
+    server_name $APACHE_DOMAINS_WITH_APP;
     
     # SSL wird später von Certbot konfiguriert
     # Für jetzt: Weiterleitung an Apache HTTPS

@@ -4,16 +4,17 @@
 
 - ✅ Apache läuft auf Port 80/443
 - ✅ Apache verwaltet: gobio.app, singlepair.fun, swing22.com, loccle.app, etc.
+- ✅ **app.cuto.ai** ist eine PHP/MySQL-Anwendung (läuft über Apache)
 - ✅ Apache nutzt Let's Encrypt SSL
-- 🎯 Ziel: Nginx für cuto.ai parallel zu Apache
+- 🎯 Ziel: Nginx für www.cuto.ai parallel zu Apache
 
 ## 🎯 Lösung: Nginx als Haupt-Proxy
 
 **Strategie:**
 1. Apache auf Port 8080/8443 umstellen
 2. Nginx auf Port 80/443 als Haupt-Proxy
-3. Nginx leitet cuto.ai direkt weiter
-4. Nginx leitet alle anderen Domains an Apache weiter
+3. Nginx leitet **www.cuto.ai** direkt an Next.js weiter (Port 3000)
+4. Nginx leitet **app.cuto.ai** und alle anderen Domains an Apache weiter (Port 8080/8443)
 
 **Vorteile:**
 - ✅ cuto.ai auf Standard-Ports (80/443)
@@ -286,10 +287,10 @@ sudo systemctl restart apache2
 ## 📝 Zusammenfassung
 
 Nach dem Setup:
-- ✅ **cuto.ai** → Nginx → Port 3000 (cuto_public)
-- ✅ **app.cuto.ai** → Nginx → später cuto_dev
-- ✅ **Alle anderen Domains** → Nginx → Apache Port 8080/8443
-- ✅ **202.61.239.35:3002** → Direkt (DEV)
+- ✅ **www.cuto.ai** → Nginx → Port 3000 (cuto_public Next.js)
+- ✅ **app.cuto.ai** → Nginx → Apache Port 8080/8443 (PHP/MySQL-App)
+- ✅ **Alle anderen Domains** (gobio.app, singlepair.fun, etc.) → Nginx → Apache Port 8080/8443
+- ✅ **202.61.239.35:3002** → Direkt (DEV - cuto_public)
 
 **Alle bestehenden Domains funktionieren weiter!**
 
