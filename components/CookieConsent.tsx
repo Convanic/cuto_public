@@ -43,10 +43,15 @@ export default function CookieConsent() {
     }));
     setIsVisible(false);
     
+    // Dispatch custom event to notify Google Analytics component
+    if (typeof window !== 'undefined') {
+      window.dispatchEvent(new Event('cookie-consent-changed'));
+    }
+    
     // Here you would typically initialize analytics/marketing scripts
     // based on the user's preferences
     if (prefs.analytics) {
-      // Initialize Google Analytics, etc.
+      // Google Analytics will be initialized by the GoogleAnalytics component
       console.log('Analytics cookies accepted');
     }
     if (prefs.marketing) {

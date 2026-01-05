@@ -5,6 +5,8 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import Providers from "@/components/Providers";
+import GoogleAnalytics from "@/lib/analytics/google-analytics";
+import MicrosoftClarity from "@/lib/analytics/microsoft-clarity";
 // import ThemeSwitcher from "@/components/ThemeSwitcher"; // A/B Test - bei Bedarf wieder aktivieren
 
 const geistSans = Geist({
@@ -163,6 +165,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics />
+        <MicrosoftClarity />
         <Providers>
           <div className="min-h-screen">
             <Navigation />
