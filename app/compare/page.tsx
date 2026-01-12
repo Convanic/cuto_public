@@ -6,11 +6,11 @@ import Link from 'next/link';
 import AnimatedSection from '@/components/AnimatedSection';
 import { useI18n } from '@/lib/i18n/context';
 import {
-  products,
-  features,
+  getProducts,
+  getFeatures,
   featureComparisons,
-  featureCategories,
-  featureSupportConfig,
+  getFeatureCategories,
+  getFeatureSupportConfig,
   FeatureCategory,
   FeatureSupport,
   getFeaturesByCategory,
@@ -18,8 +18,15 @@ import {
 } from '@/lib/comparison';
 
 export default function ComparePage() {
-  const { t } = useI18n();
+  const { t, locale } = useI18n();
   const [selectedCategory, setSelectedCategory] = useState<FeatureCategory | 'all'>('all');
+  
+  // Get translated data
+  const products = getProducts(locale);
+  const features = getFeatures(locale);
+  const featureCategories = getFeatureCategories(locale);
+  const featureSupportConfig = getFeatureSupportConfig(locale);
+  
   const [expandedCategories, setExpandedCategories] = useState<Set<FeatureCategory>>(
     new Set(Object.keys(featureCategories) as FeatureCategory[])
   );
@@ -179,7 +186,7 @@ export default function ComparePage() {
               {/* Table Header */}
               <thead>
                 <tr className="bg-gray-50 border-b border-gray-200">
-                  <th className="p-4 text-left font-semibold text-gray-700 w-1/4">Feature</th>
+                  <th className="p-4 text-left font-semibold text-gray-700 w-1/4">{t.compare.feature || 'Feature'}</th>
                   {products.map((product) => (
                     <th 
                       key={product.id} 
@@ -199,7 +206,7 @@ export default function ComparePage() {
                 {/* Table Body by Category */}
                 {filteredCategories.map((categoryKey) => {
                   const category = featureCategories[categoryKey];
-                  const categoryFeatures = getFeaturesByCategory(categoryKey);
+                  const categoryFeatures = getFeaturesByCategory(categoryKey, locale);
                   const isExpanded = expandedCategories.has(categoryKey);
 
                   return (
